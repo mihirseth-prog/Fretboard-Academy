@@ -121,46 +121,6 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 /* PAGE HEADER */
 .page-header{padding:4rem 2.5rem 2.5rem;max-width:1180px;margin:0 auto;}
 
-/* LESSONS PAGE */
-.lesson-type-toggle{display:flex;gap:0;background:var(--dark2);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:4px;width:fit-content;margin:1.75rem 0 2.5rem;}
-.ltt-btn{font-family:var(--font-m);font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.55rem 1.4rem;border-radius:5px;border:none;background:transparent;color:var(--muted);transition:all 0.2s;}
-.ltt-btn.active{background:var(--amber);color:var(--navy);font-weight:700;}
-.lesson-type-panel{display:none;}
-.lesson-type-panel.active{display:block;}
-.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;margin-top:0.5rem;}
-.video-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:8px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;}
-.video-card:hover{border-color:rgba(245,166,35,0.38);transform:translateY(-3px);}
-.video-thumb{height:168px;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;cursor:pointer;}
-.play-btn{position:absolute;width:52px;height:52px;border-radius:50%;background:rgba(245,166,35,0.92);display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transition:opacity 0.2s;left:50%;top:50%;transform:translate(-50%,-50%);}
-.video-card:hover .play-btn{opacity:1;}
-.video-body{padding:1.25rem 1.4rem;}
-.video-body h3{font-size:0.975rem;font-weight:600;margin-bottom:0.35rem;line-height:1.3;}
-.video-body p{font-size:0.845rem;color:var(--muted);line-height:1.57;margin-bottom:0.875rem;}
-.video-footer{display:flex;justify-content:space-between;align-items:center;padding:0.875rem 1.4rem;border-top:1px solid rgba(255,255,255,0.06);}
-.video-duration{font-family:var(--font-m);font-size:0.72rem;color:var(--muted);}
-.inperson-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin-top:0.5rem;}
-.inperson-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:2rem;transition:border-color 0.2s,transform 0.2s;}
-.inperson-card:hover{border-color:rgba(245,166,35,0.38);transform:translateY(-3px);}
-.inperson-card.featured{border-color:rgba(245,166,35,0.5);}
-.inperson-icon{font-size:2rem;margin-bottom:1rem;}
-.inperson-card h3{font-size:1.05rem;font-weight:700;margin-bottom:0.4rem;}
-.inperson-card .price-tag{font-family:var(--font-d);font-size:1.75rem;color:var(--amber);margin-bottom:0.5rem;line-height:1;}
-.inperson-card .price-tag span{font-family:var(--font-b);font-size:0.9rem;font-weight:400;color:var(--muted);}
-.inperson-card p{font-size:0.875rem;color:var(--muted);line-height:1.65;margin-bottom:1.25rem;}
-.inperson-features{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;}
-.inperson-features li{font-size:0.855rem;color:var(--muted);display:flex;gap:0.6rem;align-items:flex-start;}
-.inperson-features li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;}
-.inperson-who{background:rgba(245,166,35,0.07);border:1px solid rgba(245,166,35,0.15);border-radius:6px;padding:0.875rem 1rem;margin-bottom:1.25rem;}
-.inperson-who p{font-size:0.82rem;color:var(--muted);margin:0;line-height:1.6;}
-.inperson-who strong{color:var(--amber);}
-.how-it-works{background:var(--dark2);border-radius:10px;padding:2.5rem;margin-top:3rem;border:1px solid rgba(255,255,255,0.07);}
-.how-it-works h3{font-size:1.1rem;font-weight:700;margin-bottom:1.75rem;}
-.hiw-steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.5rem;}
-.hiw-step{text-align:center;}
-.hiw-num{font-family:var(--font-d);font-size:2.5rem;color:rgba(245,166,35,0.3);line-height:1;margin-bottom:0.5rem;}
-.hiw-step h4{font-size:0.9rem;font-weight:600;margin-bottom:0.35rem;}
-.hiw-step p{font-size:0.82rem;color:var(--muted);line-height:1.6;}
-
 /* SKILLS PAGE */
 .skills-intro{max-width:680px;}
 .skill-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin:2rem 0;}
@@ -275,6 +235,19 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .guarantee-inner h4{font-size:0.975rem;font-weight:700;margin-bottom:0.35rem;color:var(--green);}
 .guarantee-inner p{font-size:0.875rem;color:var(--muted);line-height:1.65;}
 
+/* VIDEO GRID (for start page) */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;margin-top:0.5rem;}
+.video-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:8px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;}
+.video-card:hover{border-color:rgba(245,166,35,0.38);transform:translateY(-3px);}
+.video-thumb{height:168px;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative;cursor:pointer;background:#1A2235;}
+.play-btn{position:absolute;width:52px;height:52px;border-radius:50%;background:rgba(245,166,35,0.92);display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transition:opacity 0.2s;left:50%;top:50%;transform:translate(-50%,-50%);}
+.video-card:hover .play-btn{opacity:1;}
+.video-body{padding:1.25rem 1.4rem;}
+.video-body h3{font-size:0.975rem;font-weight:600;margin-bottom:0.35rem;line-height:1.3;}
+.video-body p{font-size:0.845rem;color:var(--muted);line-height:1.57;margin-bottom:0.875rem;}
+.video-footer{display:flex;justify-content:space-between;align-items:center;padding:0.875rem 1.4rem;border-top:1px solid rgba(255,255,255,0.06);}
+.video-duration{font-family:var(--font-m);font-size:0.72rem;color:var(--muted);}
+
 /* FOOTER */
 footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);padding:2.75rem 2.5rem;}
 .footer-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.25rem;}
@@ -313,7 +286,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <a class="nav-logo" href="#" onclick="showPage('home');return false;">Fretboard Academy</a>
   <ul class="nav-links">
     <li><a href="#" data-page="home">Home</a></li>
-    <li><a href="#" data-page="lessons">Lessons</a></li>
+    <!-- Lessons page removed -->
     <li><a href="#" data-page="skills">Skills</a></li>
     <li><a href="#" data-page="gallery">Gallery</a></li>
     <li><a href="#" data-page="about">About</a></li>
@@ -326,7 +299,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#" data-page="home">Home</a>
-  <a href="#" data-page="lessons">Lessons</a>
+  <!-- Lessons removed -->
   <a href="#" data-page="skills">Skills</a>
   <a href="#" data-page="gallery">Gallery</a>
   <a href="#" data-page="about">About</a>
@@ -468,112 +441,6 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   </div>
 </div>
 
-<!-- ═══════════ LESSONS ═══════════ -->
-<div class="page" id="page-lessons">
-  <div class="page-header wrap">
-    <p class="eyebrow">Learn your way</p>
-    <h1 class="display">Lessons</h1>
-    <p class="lead">Whether you learn best from video or prefer one-on-one time with an instructor, we've got you covered.</p>
-    <div class="lesson-type-toggle">
-      <button class="ltt-btn active" data-ltype="video">📹 Video Lessons</button>
-      <button class="ltt-btn" data-ltype="inperson">🎸 In-Person Lessons</button>
-    </div>
-  </div>
-
-  <div class="wrap" style="padding-bottom:5rem;">
-
-    <!-- VIDEO LESSONS -->
-    <div class="lesson-type-panel active" id="ltype-video">
-      <p style="font-size:0.9rem;color:var(--muted);margin-bottom:2rem;max-width:580px;line-height:1.68;">30 structured video lessons you can watch at your own pace, rewind as many times as you need, and revisit forever. Your first lesson is always free.</p>
-      <div class="video-grid" id="videoGrid"></div>
-    </div>
-
-    <!-- IN-PERSON LESSONS -->
-    <div class="lesson-type-panel" id="ltype-inperson">
-      <p style="font-size:0.9rem;color:var(--muted);margin-bottom:2rem;max-width:580px;line-height:1.68;">Work directly with Mihir or Ranvir in a one-on-one setting. Real-time feedback, customized pacing, and lessons built around the music you actually want to play.</p>
-
-      <div class="inperson-grid">
-
-        <div class="inperson-card">
-          <div class="inperson-icon">🎯</div>
-          <h3>Single Lesson</h3>
-          <div class="price-tag">$20 <span>/ lesson</span></div>
-          <p>Drop in for one session — great for trying us out or working on a specific technique.</p>
-          <ul class="inperson-features">
-            <li>45-minute one-on-one session</li>
-            <li>Choose your focus area</li>
-            <li>Personalized feedback</li>
-            <li>First lesson free</li>
-          </ul>
-          <div class="inperson-who"><p><strong>Best for:</strong> First-timers or students who want to try before committing.</p></div>
-          <button class="btn-s" style="width:100%;" onclick="showPage('start')">Book a lesson</button>
-        </div>
-
-        <div class="inperson-card featured">
-          <div class="inperson-icon">📅</div>
-          <h3>Monthly Plan — 4 Lessons</h3>
-          <div class="price-tag">$75 <span>/ month</span></div>
-          <p>One lesson per week with the same instructor. Consistency is the fastest path to real progress.</p>
-          <ul class="inperson-features">
-            <li>4 x 45-minute sessions</li>
-            <li>Same instructor every week</li>
-            <li>Personalized lesson plan</li>
-            <li>Progress tracking</li>
-            <li>First lesson free</li>
-          </ul>
-          <div class="inperson-who"><p><strong>Best for:</strong> Students who want steady, structured improvement without a long commitment.</p></div>
-          <button class="btn-p" style="width:100%;" onclick="showPage('start')">Start monthly plan</button>
-        </div>
-
-        <div class="inperson-card">
-          <div class="inperson-icon">📆</div>
-          <h3>3-Month Pack</h3>
-          <div class="price-tag">$220 <span>/ 3 months</span></div>
-          <p>A full quarter of weekly lessons. Most students play their first real songs within this window.</p>
-          <ul class="inperson-features">
-            <li>~12 sessions over 3 months</li>
-            <li>Same instructor every week</li>
-            <li>Personalized lesson plan</li>
-            <li>Progress tracking</li>
-            <li>Priority scheduling</li>
-          </ul>
-          <div class="inperson-who"><p><strong>Best for:</strong> Beginners who want to go from zero to playing songs with confidence.</p></div>
-          <button class="btn-s" style="width:100%;" onclick="showPage('start')">Get 3-month pack</button>
-        </div>
-
-        <div class="inperson-card">
-          <div class="inperson-icon">🏆</div>
-          <h3>6-Month Pack</h3>
-          <div class="price-tag">$470 <span>/ 6 months</span></div>
-          <p>The full transformation. Go from wherever you are now to genuinely confident, expressive playing.</p>
-          <ul class="inperson-features">
-            <li>~24 sessions over 6 months</li>
-            <li>Same instructor every week</li>
-            <li>Personalized lesson plan</li>
-            <li>Progress tracking</li>
-            <li>Priority scheduling</li>
-            <li>Repertoire building</li>
-          </ul>
-          <div class="inperson-who"><p><strong>Best for:</strong> Committed students who want to reach an intermediate or advanced level.</p></div>
-          <button class="btn-s" style="width:100%;" onclick="showPage('start')">Get 6-month pack</button>
-        </div>
-
-      </div>
-
-      <div class="how-it-works">
-        <h3>How in-person lessons work</h3>
-        <div class="hiw-steps">
-          <div class="hiw-step"><div class="hiw-num">1</div><h4>Book a free first lesson</h4><p>No payment needed upfront. We'll match you with the right instructor and find a time that works.</p></div>
-          <div class="hiw-step"><div class="hiw-num">2</div><h4>Meet your instructor</h4><p>Mihir or Ranvir will assess where you are, what you want to play, and build a plan around you.</p></div>
-          <div class="hiw-step"><div class="hiw-num">3</div><h4>Learn at your pace</h4><p>No rigid curriculum. Sessions adapt to your progress, your goals, and the music you love.</p></div>
-          <div class="hiw-step"><div class="hiw-num">4</div><h4>Play real music</h4><p>From your first lesson, you'll be playing actual songs — not just exercises. That's the Fretboard way.</p></div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
 <!-- ═══════════ SKILLS ═══════════ -->
 <div class="page" id="page-skills">
   <div class="page-header wrap">
@@ -666,7 +533,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
     <div>
       <div class="contact-block"><h3>📧 Email us</h3><p>Reach Ranvir: <a href="mailto:ranvirtanwar105@gmail.com">ranvirtanwar105@gmail.com</a><br/>Reach Mihir: <a href="mailto:mihir.seth@icloud.com">mihir.seth@icloud.com</a></p></div>
       <div class="contact-block"><h3>⏱ Response time</h3><p>We reply to every message within 24 hours on weekdays. Pro members get priority support.</p></div>
-      <div class="contact-block"><h3>🌐 Follow along</h3><div class="social-links"><a href="#" class="social-link">YouTube</a><a href="#" class="social-link">Instagram</a><a href="#" class="social-link">TikTok</a><a href="#" class="social-link">Discord</a></div></div>
+      <div class="contact-block"><h3>🌐 Follow along</h3><div class="social-links"><a href="#" class="social-link">YouTube</a><a href="#" class="social-link">Instagram</a><a href="#" class="social-link">TikTok</a><a href="#" class="social-link">X</a></div></div>
       <div class="faq">
         <h3>Common questions</h3>
         <div class="faq-item"><div class="faq-q">Do I need to own a guitar to start? <span class="arrow">▼</span></div><div class="faq-a">You'll need a guitar to practice, but you can watch the first free lesson first to decide which type to buy.</div></div>
@@ -724,7 +591,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
         <li class="no">Lesson history library</li>
         <li class="no">Direct instructor feedback</li>
       </ul>
-      <button class="btn-s plan-btn" onclick="alert('In a live site this opens the booking flow.')">Book a lesson</button>
+      <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
 
     <div class="plan-card featured">
@@ -739,7 +606,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
         <li>Lesson history library</li>
         <li>Direct instructor feedback</li>
       </ul>
-      <button class="btn-p plan-btn" onclick="alert('In a live site this opens checkout.')">Start monthly plan</button>
+      <button class="btn-p plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
 
     <div class="plan-card">
@@ -753,7 +620,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
         <li>Lesson history library</li>
         <li>Direct instructor feedback</li>
       </ul>
-      <button class="btn-s plan-btn" onclick="alert('In a live site this opens checkout.')">Get 3-month pack</button>
+      <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
 
     <div class="plan-card">
@@ -768,7 +635,48 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
         <li>Direct instructor feedback</li>
         <li>Priority scheduling</li>
       </ul>
-      <button class="btn-s plan-btn" onclick="alert('In a live site this opens checkout.')">Get 6-month pack</button>
+      <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
+    </div>
+  </div>
+
+  <!-- Video Lessons Section -->
+  <div class="wrap" style="padding: 4rem 2.5rem 5rem;">
+    <p class="eyebrow">Video Lessons</p>
+    <h2 class="display" style="margin-bottom:1.5rem;">30 structured video lessons</h2>
+    <p style="font-size:0.9rem;color:var(--muted);margin-bottom:2rem;max-width:580px;line-height:1.68;">Watch at your own pace. Your first lesson is always free.</p>
+    <div class="video-grid">
+      <!-- Sample video cards -->
+      <div class="video-card">
+        <div class="video-thumb" style="background:#1A2235;">▶<span class="play-btn">▶</span></div>
+        <div class="video-body">
+          <h3>Timing & Rhythm Fundamentals</h3>
+          <p>Learn to count beats and develop groove.</p>
+        </div>
+        <div class="video-footer">
+          <div class="video-duration">12 min</div>
+          <span style="color:var(--amber);font-size:0.8rem;">Free</span>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb" style="background:#1A2235;">▶<span class="play-btn">▶</span></div>
+        <div class="video-body">
+          <h3>Smooth Chord Transitions</h3>
+          <p>Master changing between chords cleanly.</p>
+        </div>
+        <div class="video-footer">
+          <div class="video-duration">18 min</div>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb" style="background:#1A2235;">▶<span class="play-btn">▶</span></div>
+        <div class="video-body">
+          <h3>Fretboard Navigation Basics</h3>
+          <p>Learn notes on the neck.</p>
+        </div>
+        <div class="video-footer">
+          <div class="video-duration">15 min</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -902,11 +810,11 @@ renderChord('G');
 
 /* ─── TESTIMONIALS ───────────────────────────────────────── */
 const REVIEWS=[
-  {initials:'CM',name:'Cole Mason',detail:'Playing for 6+ months',stars:5,
+  {initials:'CM',name:'Cole M.',detail:'Playing for 6+ months',stars:5,
    text:'I was at school of rock but I did not like the structure and when I found out about fretboard academy, I thought it was just another bad program. but when I signed up, I loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way that I enjoyed it.'},
-  {initials:'N',name:'Neil',detail:'Playing for 3 months',stars:5,
+  {initials:'NM',name:'Neil M.',detail:'Playing for 3 months',stars:5,
    text:'Real people, real results.'},
-  {initials:'T',name:'Tyrone',detail:'Playing for 4 months',stars:5,
+  {initials:'TJ',name:'Tyrone J.',detail:'Playing for 4 months',stars:5,
    text:'Great program!'},
   {initials:'A',name:'Anonymous',detail:'Recent student',stars:5,
    text:'Great quality for being so cheap!'},
@@ -948,7 +856,9 @@ function submitReview(){
   const months=document.getElementById('rmonths').value.trim();
   const text=document.getElementById('rtext').value.trim();
   if(!name||!text){alert('Please fill in your name and review.');return;}
-  REVIEWS.push({initials:name.slice(0,2).toUpperCase(),name,detail:months||'Recent student',stars:selectedStars,text});
+  REVIEWS.unshift({initials:name.slice(0,2).toUpperCase(),name,detail:months||'Recent student',stars:selectedStars,text}); // Add to front and sort best first
+  // Sort by stars descending for best reviews first
+  REVIEWS.sort((a,b)=>b.stars - a.stars);
   buildTestimonials();
   document.getElementById('reviewFormInner').style.display='none';
   document.getElementById('reviewSubmitted').style.display='block';
@@ -1143,9 +1053,9 @@ buildSkillContent('timing');
 
 /* ─── GALLERY ────────────────────────────────────────────── */
 const STUDENTS=[
-  {name:'Cole Mason',level:'intermediate',detail:'Playing 6+ months',emoji:'🎸',bg:'#1A2A20',quote:'Loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way I enjoyed it.'},
-  {name:'Neil',level:'beginner',detail:'Playing 3 months',emoji:'🎵',bg:'#201A1A',quote:'Real people, real results.'},
-  {name:'Tyrone',level:'intermediate',detail:'Playing 4 months',emoji:'⚡',bg:'#1A1A2A',quote:'Great program!'},
+  {name:'Cole M.',level:'intermediate',detail:'Playing 6+ months',emoji:'🎸',bg:'#1A2A20',quote:'Loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way I enjoyed it.'},
+  {name:'Neil M.',level:'beginner',detail:'Playing 3 months',emoji:'🎵',bg:'#201A1A',quote:'Real people, real results.'},
+  {name:'Tyrone J.',level:'intermediate',detail:'Playing 4 months',emoji:'⚡',bg:'#1A1A2A',quote:'Great program!'},
   {name:'Anonymous',level:'beginner',detail:'Recent student',emoji:'🌟',bg:'#1A2020',quote:'Great quality for being so cheap!'},
 ];
 function buildGallery(filter){
