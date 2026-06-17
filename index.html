@@ -411,7 +411,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <div class="cta-strip">
     <p class="eyebrow">Ready when you are</p>
     <h2 class="display">Pick up your guitar.<br>Let's start today.</h2>
-    <p>Your first lesson is completely free. Not happy after 3 lessons? Full money-back guarantee.</p>
+    <p>Your first lesson is completely free. Not happy after your second lesson? Full money-back guarantee.</p>
     <a href="#" class="btn-p" onclick="showPage('start');return false;">Start Your First Lesson</a>
   </div>
 </div>
@@ -514,13 +514,14 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
           <a href="https://www.instagram.com/fretboardacademyreal/" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.tiktok.com/@fretboardacademy" class="social-link" target="_blank" rel="noopener noreferrer">TikTok</a>
           <a href="https://x.com/fretboardreal" class="social-link" target="_blank" rel="noopener noreferrer">X</a>
+          <a href="https://www.facebook.com/profile.php?id=61590577967956" class="social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
       </div>
       <div class="faq">
         <h3>Common questions</h3>
-        <div class="faq-item"><div class="faq-q">Do I need to own a guitar to start? <span class="arrow">▼</span></div><div class="faq-a">You'll need a guitar to practice, but you can watch the first free lesson first to decide which type to buy.</div></div>
+        <div class="faq-item"><div class="faq-q">Do I need to own a guitar to start? <span class="arrow">▼</span></div><div class="faq-a">No — for the first few lessons we have a guitar you can use. After that you'll need to get your own, and we're happy to help you pick the right one for your budget and style.</div></div>
         <div class="faq-item"><div class="faq-q">What if I'm a complete beginner? <span class="arrow">▼</span></div><div class="faq-a">Perfect — that's who we design for first. Our beginner path assumes zero prior knowledge and gets you playing songs within the first week.</div></div>
-        <div class="faq-item"><div class="faq-q">Is there a money-back guarantee? <span class="arrow">▼</span></div><div class="faq-a">Yes. If you complete 3 lessons and don't enjoy it, we'll refund you in full — no questions asked.</div></div>
+        <div class="faq-item"><div class="faq-q">Is there a money-back guarantee? <span class="arrow">▼</span></div><div class="faq-a">Yes. Your first lesson is free. If you take your second lesson and don't enjoy it, we'll refund you in full — no questions asked.</div></div>
         <div class="faq-item"><div class="faq-q">Can I switch plans later? <span class="arrow">▼</span></div><div class="faq-a">Absolutely. Upgrade or downgrade any time. We'll prorate the difference if you're mid-cycle.</div></div>
         <div class="faq-item"><div class="faq-q">Do lessons work on mobile? <span class="arrow">▼</span></div><div class="faq-a">Yes — everything is fully responsive. Many students watch on their phone or tablet while their guitar is in their hands.</div></div>
       </div>
@@ -548,15 +549,15 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <div class="start-hero">
     <p class="eyebrow">Your journey starts here</p>
     <h1 class="display">Choose your plan</h1>
-    <p>Your first lesson is free — no card needed. Not happy after 3 lessons? We'll refund you in full.</p>
+    <p>Your first lesson is free — no card needed. Not happy after your second lesson? We'll refund you in full.</p>
   </div>
 
   <div class="guarantee-box">
     <div class="guarantee-inner">
       <div class="guarantee-icon">🛡️</div>
       <div>
-        <h4>Money-back guarantee</h4>
-        <p>Try 3 lessons. If you don't enjoy the experience, email us and we'll refund every cent — no questions asked, no hoops to jump through.</p>
+        <h4>First lesson free. Second lesson money-back guarantee.</h4>
+        <p>Your first lesson is completely free — no card needed. After your second lesson, if you're not happy with the experience, email us and we'll refund every cent — no questions asked, no hoops to jump through.</p>
       </div>
     </div>
   </div>
@@ -785,8 +786,11 @@ document.getElementById('chordButtons')?.addEventListener('click',e=>{
 renderChord('G');
 
 /* ─── REVIEWS — SHARED PERSISTENT STORAGE ───────────────── */
-// Reviews are stored via window.storage (shared=true) so every visitor
-// on every device sees the same set of reviews.
+// Uses a free Firebase Realtime Database (no account needed to read/write
+// from the browser). Reviews are stored at the URL below and are visible
+// to every visitor on every device in real time.
+
+const DB_URL = 'https://fretboard-academy-default-rtdb.firebaseio.com/reviews';
 
 const DEFAULT_REVIEWS=[
   {initials:'CM',name:'Cole M.',detail:'Playing for 6+ months',stars:5,
@@ -797,30 +801,6 @@ const DEFAULT_REVIEWS=[
 ];
 
 let REVIEWS=[...DEFAULT_REVIEWS];
-
-async function loadReviews(){
-  try{
-    const result=await window.storage.get('fa_reviews_shared',true);
-    if(result && result.value){
-      const parsed=JSON.parse(result.value);
-      if(Array.isArray(parsed) && parsed.length>0){
-        REVIEWS=parsed;
-      }
-    }
-  }catch(e){
-    // Key doesn't exist yet or storage unavailable — use defaults
-    REVIEWS=[...DEFAULT_REVIEWS];
-  }
-  buildTestimonials();
-}
-
-async function saveReviews(arr){
-  try{
-    await window.storage.set('fa_reviews_shared',JSON.stringify(arr),true);
-  }catch(e){
-    console.warn('Could not save reviews to shared storage:',e);
-  }
-}
 
 function starsHTML(n){return '★'.repeat(n)+'☆'.repeat(5-n);}
 
@@ -837,6 +817,46 @@ function buildTestimonials(){
       </div>
     </div>
   `).join('');
+}
+
+async function loadReviews(){
+  try{
+    const res=await fetch(DB_URL+'.json');
+    if(res.ok){
+      const data=await res.json();
+      // Firebase stores arrays as objects with numeric keys, or null if empty
+      if(data && typeof data==='object' && !Array.isArray(data)){
+        const arr=Object.values(data);
+        if(arr.length>0){REVIEWS=arr;buildTestimonials();return;}
+      }
+      if(Array.isArray(data)&&data.length>0){
+        REVIEWS=data.filter(Boolean);
+        buildTestimonials();
+        return;
+      }
+    }
+    // Nothing stored yet — seed the defaults into the DB
+    await fetch(DB_URL+'.json',{
+      method:'PUT',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(DEFAULT_REVIEWS)
+    });
+  }catch(e){
+    // Network unavailable — show defaults silently
+  }
+  buildTestimonials();
+}
+
+async function saveReviews(arr){
+  try{
+    await fetch(DB_URL+'.json',{
+      method:'PUT',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(arr)
+    });
+  }catch(e){
+    console.warn('Could not save reviews:',e);
+  }
 }
 
 // Load reviews on page init
