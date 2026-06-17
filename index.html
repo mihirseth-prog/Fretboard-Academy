@@ -19,6 +19,8 @@ html{scroll-behavior:smooth;}
 body{background:var(--navy);color:var(--white);font-family:var(--font-b);font-size:16px;line-height:1.6;overflow-x:hidden;}
 a{color:inherit;text-decoration:none;}
 button{font-family:var(--font-b);cursor:pointer;}
+
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2.5rem;background:rgba(13,17,23,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(245,166,35,0.12);}
 .nav-logo{font-family:var(--font-d);font-size:1.35rem;color:var(--amber);}
 .nav-links{display:flex;gap:0;list-style:none;}
@@ -33,9 +35,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .mobile-menu a{display:block;padding:0.75rem 0;color:var(--muted);font-size:0.9rem;font-weight:500;text-transform:uppercase;letter-spacing:0.05em;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s;}
 .mobile-menu a.active{color:var(--amber);}
 .mobile-menu a:last-child{border-bottom:none;}
+
+/* PAGES */
 .page{display:none;min-height:100vh;padding-top:64px;animation:fadeIn 0.3s ease;}
 .page.active{display:block;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+/* SHARED */
 .wrap{max-width:1180px;margin:0 auto;padding:0 2.5rem;}
 .section{padding:5rem 0;}
 .eyebrow{font-family:var(--font-m);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);margin-bottom:0.875rem;}
@@ -47,20 +53,28 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .btn-s{display:inline-block;background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.22);padding:0.85rem 2rem;border-radius:4px;font-size:0.9375rem;font-weight:500;transition:border-color 0.2s,color 0.2s;cursor:pointer;}
 .btn-s:hover{border-color:var(--amber);color:var(--amber);}
 .divider{border:none;border-top:1px solid rgba(255,255,255,0.07);margin:0;}
+
+/* HOME HERO */
 .hero{min-height:calc(100vh - 64px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;padding:4rem 2.5rem;max-width:1180px;margin:0 auto;}
 .hero-text h1 em{color:var(--amber);font-style:normal;}
 .hero-text p{margin-bottom:2.25rem;}
 .hero-btns{display:flex;gap:0.875rem;flex-wrap:wrap;}
+
+/* CHORD DIAGRAM */
 .chord-demo{display:flex;flex-direction:column;align-items:center;gap:1.25rem;}
 .chord-label{font-family:var(--font-m);font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
 .chord-name-big{font-family:var(--font-d);font-size:3.5rem;color:var(--amber);min-height:3.75rem;line-height:1;}
 .chord-btns{display:flex;gap:0.4rem;flex-wrap:wrap;justify-content:center;}
 .chord-btn{font-family:var(--font-m);font-size:0.8rem;font-weight:600;padding:0.3rem 0.85rem;border-radius:3px;border:1px solid rgba(245,166,35,0.28);background:transparent;color:var(--muted);transition:all 0.15s;}
 .chord-btn:hover,.chord-btn.active{background:rgba(245,166,35,0.14);border-color:var(--amber);color:var(--amber);}
+
+/* STATS */
 .stats-bar{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);}
 .stats-inner{max-width:1180px;margin:0 auto;padding:2.25rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);text-align:center;gap:1rem;}
 .stat-val{font-family:var(--font-d);font-size:2.25rem;color:var(--amber);line-height:1;}
 .stat-lbl{font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.35rem;}
+
+/* LESSON CARDS (home) */
 .lessons-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem;margin-top:2.75rem;}
 .lesson-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:1.65rem;transition:border-color 0.2s,transform 0.2s;cursor:pointer;}
 .lesson-card:hover{border-color:rgba(245,166,35,0.38);transform:translateY(-3px);}
@@ -70,6 +84,8 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .lvl-a{background:rgba(232,112,112,0.18);color:var(--red);}
 .lesson-card h3{font-size:1rem;font-weight:600;margin-bottom:0.5rem;line-height:1.3;}
 .lesson-card p{font-size:0.855rem;color:var(--muted);line-height:1.58;}
+
+/* TESTIMONIALS */
 .testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin-top:2.75rem;}
 .testi{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:1.75rem;}
 .stars{color:var(--amber);font-size:0.78rem;margin-bottom:0.75rem;}
@@ -78,7 +94,8 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:var(--navy);background:linear-gradient(135deg,var(--sage),var(--amber));}
 .author-name{font-size:0.85rem;font-weight:600;}
 .author-detail{font-size:0.75rem;color:var(--muted);}
-.testi-loading{color:var(--muted);font-size:0.9rem;padding:2rem 0;font-style:italic;}
+
+/* REVIEW SUBMISSION */
 .review-form-wrap{background:var(--dark2);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:2.25rem;margin-top:3rem;}
 .review-form-wrap h3{font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;}
 .review-form-wrap .sub{font-size:0.875rem;color:var(--muted);margin-bottom:1.75rem;}
@@ -95,9 +112,15 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .review-submitted{display:none;text-align:center;padding:2rem;}
 .review-submitted .check{font-size:2.5rem;margin-bottom:0.75rem;}
 .review-submitted p{color:var(--muted);font-size:0.9rem;}
+
+/* CTA */
 .cta-strip{background:linear-gradient(135deg,rgba(245,166,35,0.1) 0%,rgba(74,124,89,0.07) 100%);border-top:1px solid rgba(245,166,35,0.18);border-bottom:1px solid rgba(245,166,35,0.1);text-align:center;padding:5rem 2.5rem;}
 .cta-strip p{color:var(--muted);font-size:1.05rem;max-width:460px;margin:0.75rem auto 2rem;line-height:1.7;}
+
+/* PAGE HEADER */
 .page-header{padding:4rem 2.5rem 2.5rem;max-width:1180px;margin:0 auto;}
+
+/* SKILLS PAGE */
 .skills-intro{max-width:680px;}
 .skill-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin:2rem 0;}
 .skill-tab{font-family:var(--font-m);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.5rem 1.1rem;border-radius:100px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:var(--muted);transition:all 0.15s;}
@@ -119,6 +142,8 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .skill-num{font-family:var(--font-d);font-size:1.5rem;color:rgba(245,166,35,0.3);min-width:2rem;line-height:1;padding-top:0.1rem;}
 .skill-item h4{font-size:0.975rem;font-weight:600;margin-bottom:0.3rem;}
 .skill-item p{font-size:0.855rem;color:var(--muted);line-height:1.6;}
+
+/* GALLERY */
 .filter-bar{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.5rem;}
 .filter-btn{font-family:var(--font-m);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:var(--muted);transition:all 0.15s;}
 .filter-btn:hover,.filter-btn.active{border-color:var(--amber);color:var(--amber);background:rgba(245,166,35,0.1);}
@@ -131,6 +156,8 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .student-name{font-size:0.95rem;font-weight:600;margin-bottom:0.2rem;}
 .student-detail{font-size:0.8rem;color:var(--muted);}
 .student-quote{font-size:0.845rem;color:var(--muted);font-style:italic;margin-top:0.625rem;line-height:1.55;border-left:2px solid var(--amber);padding-left:0.75rem;}
+
+/* ABOUT */
 .about-hero{padding:4rem 2.5rem 3rem;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;}
 .about-visual{background:var(--dark2);border-radius:12px;border:1px solid rgba(255,255,255,0.07);padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;}
 .about-quote{font-family:var(--font-d);font-size:1.5rem;color:var(--white);line-height:1.25;}
@@ -148,6 +175,8 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .team-name{font-size:1rem;font-weight:600;margin-bottom:0.25rem;}
 .team-role{font-family:var(--font-m);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:0.625rem;}
 .team-bio{font-size:0.84rem;color:var(--muted);line-height:1.6;}
+
+/* CONTACT */
 .contact-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;padding:3rem 2.5rem 5rem;}
 .contact-block{margin-bottom:1.75rem;}
 .contact-block h3{font-size:1rem;font-weight:600;margin-bottom:0.35rem;}
@@ -179,6 +208,8 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .form-success .check{font-size:3rem;margin-bottom:1rem;}
 .form-success h4{font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;}
 .form-success p{font-size:0.9rem;color:var(--muted);}
+
+/* START / PRICING */
 .start-hero{max-width:680px;margin:0 auto;padding:4rem 2.5rem 2rem;text-align:center;}
 .start-hero h1{margin-bottom:1rem;}
 .start-hero p{color:var(--muted);font-size:1.05rem;line-height:1.7;margin-bottom:2.5rem;}
@@ -202,6 +233,8 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .guarantee-icon{font-size:2rem;flex-shrink:0;}
 .guarantee-inner h4{font-size:0.975rem;font-weight:700;margin-bottom:0.35rem;color:var(--green);}
 .guarantee-inner p{font-size:0.875rem;color:var(--muted);line-height:1.65;}
+
+/* FOOTER */
 footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);padding:2.75rem 2.5rem;}
 .footer-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.25rem;}
 .footer-logo{font-family:var(--font-d);font-size:1.2rem;color:var(--amber);}
@@ -209,6 +242,8 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
 .footer-links a{color:var(--muted);font-size:0.85rem;transition:color 0.2s;}
 .footer-links a:hover{color:var(--white);}
 .footer-copy{color:var(--muted);font-size:0.8rem;}
+
+/* RESPONSIVE */
 @media(max-width:900px){
   .hero,.about-hero,.contact-grid{grid-template-columns:1fr;}
   .stats-inner{grid-template-columns:repeat(2,1fr);}
@@ -253,14 +288,14 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <a href="#" data-page="gallery">Gallery</a>
   <a href="#" data-page="about">About</a>
   <a href="#" data-page="contact">Contact</a>
-  <a href="#" data-page="start">Start Now &rarr;</a>
+  <a href="#" data-page="start">Start Now →</a>
 </div>
 
-<!-- HOME -->
+<!-- ═══════════ HOME ═══════════ -->
 <div class="page active" id="page-home">
   <div class="hero">
     <div class="hero-text">
-      <p class="eyebrow">Guitar lessons &middot; Long Grove, Illinois</p>
+      <p class="eyebrow">Guitar lessons · Long Grove, Illinois</p>
       <h1 class="display">Pick up your guitar and actually <em>play something</em></h1>
       <p class="lead">No music theory overwhelm. No boring drills. Just clear, structured lessons that get you sounding good fast.</p>
       <div class="hero-btns">
@@ -274,23 +309,23 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
       <svg id="chordSvg" width="260" height="290" viewBox="0 0 260 290" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;filter:drop-shadow(0 0 28px rgba(245,166,35,0.08))">
         <rect width="260" height="290" rx="10" fill="#1A2235"/>
         <rect x="35" y="44" width="190" height="5" fill="#C8B89A" rx="2"/>
-        <line x1="35" y1="94" x2="225" y2="94" stroke="#2E3F5A" stroke-width="1.5"/>
+        <line x1="35" y1="94"  x2="225" y2="94"  stroke="#2E3F5A" stroke-width="1.5"/>
         <line x1="35" y1="144" x2="225" y2="144" stroke="#2E3F5A" stroke-width="1.5"/>
         <line x1="35" y1="194" x2="225" y2="194" stroke="#2E3F5A" stroke-width="1.5"/>
         <line x1="35" y1="244" x2="225" y2="244" stroke="#2E3F5A" stroke-width="1.5"/>
-        <line x1="35" y1="44" x2="35" y2="250" stroke="#4A6080" stroke-width="2"/>
-        <line x1="73" y1="44" x2="73" y2="250" stroke="#4A6080" stroke-width="1.8"/>
+        <line x1="35"  y1="44" x2="35"  y2="250" stroke="#4A6080" stroke-width="2"/>
+        <line x1="73"  y1="44" x2="73"  y2="250" stroke="#4A6080" stroke-width="1.8"/>
         <line x1="111" y1="44" x2="111" y2="250" stroke="#4A6080" stroke-width="1.5"/>
         <line x1="149" y1="44" x2="149" y2="250" stroke="#4A6080" stroke-width="1.3"/>
         <line x1="187" y1="44" x2="187" y2="250" stroke="#4A6080" stroke-width="1.2"/>
         <line x1="225" y1="44" x2="225" y2="250" stroke="#4A6080" stroke-width="1"/>
-        <text x="35" y="270" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#4A6080">E</text>
-        <text x="73" y="270" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#4A6080">A</text>
+        <text x="35"  y="270" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#4A6080">E</text>
+        <text x="73"  y="270" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#4A6080">A</text>
         <text x="111" y="270" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#4A6080">D</text>
         <text x="149" y="270" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#4A6080">G</text>
         <text x="187" y="270" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#4A6080">B</text>
         <text x="225" y="270" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#4A6080">e</text>
-        <text x="12" y="98" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#2E3F5A">1</text>
+        <text x="12" y="98"  text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#2E3F5A">1</text>
         <text x="12" y="148" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#2E3F5A">2</text>
         <text x="12" y="198" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#2E3F5A">3</text>
         <text x="12" y="248" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#2E3F5A">4</text>
@@ -310,7 +345,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <div class="stats-bar">
     <div class="stats-inner">
       <div><div class="stat-val">6+</div><div class="stat-lbl">Students taught</div></div>
-      <div><div class="stat-val">4.9&#9733;</div><div class="stat-lbl">Average rating</div></div>
+      <div><div class="stat-val">4.9★</div><div class="stat-lbl">Average rating</div></div>
       <div><div class="stat-val">2</div><div class="stat-lbl">Real instructors</div></div>
     </div>
   </div>
@@ -321,7 +356,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
     <div class="lessons-grid">
       <div class="lesson-card" onclick="showPage('skills')">
         <span class="lvl lvl-b">Beginner</span>
-        <h3>Timing &amp; Rhythm Fundamentals</h3>
+        <h3>Timing & Rhythm Fundamentals</h3>
         <p>Learn to count beats, stay in time with a metronome, and develop the groove that makes everything sound musical.</p>
       </div>
       <div class="lesson-card" onclick="showPage('skills')">
@@ -342,10 +377,9 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <div class="wrap section">
     <p class="eyebrow">From students</p>
     <h2 class="display">Real people, real results</h2>
-    <div class="testi-grid" id="homeTesti">
-      <p class="testi-loading">Loading reviews&hellip;</p>
-    </div>
+    <div class="testi-grid" id="homeTesti"></div>
 
+    <!-- Add a review -->
     <div class="review-form-wrap">
       <h3>Leave a review</h3>
       <p class="sub">Tried Fretboard Academy? We'd love to hear what you think.</p>
@@ -353,22 +387,22 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
         <div class="review-form-inner">
           <div class="fg"><label>Your name</label><input type="text" id="rname" placeholder="Cole Mason"/></div>
           <div class="fg"><label>How long have you been playing?</label><input type="text" id="rmonths" placeholder="e.g. 6 months"/></div>
-          <div class="fg full"><label>Your review</label><textarea id="rtext" placeholder="Tell us about your experience&hellip;"></textarea></div>
+          <div class="fg full"><label>Your review</label><textarea id="rtext" placeholder="Tell us about your experience…"></textarea></div>
           <div class="fg full">
             <label>Rating</label>
             <div class="star-select" id="starSelect">
-              <button type="button" data-star="1">&#9733;</button>
-              <button type="button" data-star="2">&#9733;</button>
-              <button type="button" data-star="3">&#9733;</button>
-              <button type="button" data-star="4">&#9733;</button>
-              <button type="button" data-star="5">&#9733;</button>
+              <button type="button" data-star="1">★</button>
+              <button type="button" data-star="2">★</button>
+              <button type="button" data-star="3">★</button>
+              <button type="button" data-star="4">★</button>
+              <button type="button" data-star="5">★</button>
             </div>
           </div>
-          <div class="fg full"><button class="btn-p" id="submitReviewBtn" onclick="submitReview()">Submit review</button></div>
+          <div class="fg full"><button class="btn-p" onclick="submitReview()">Submit review</button></div>
         </div>
       </div>
       <div class="review-submitted" id="reviewSubmitted">
-        <div class="check">&#127928;</div>
+        <div class="check">🎸</div>
         <p>Thanks for your review! It means a lot to Mihir and Ranvir.</p>
       </div>
     </div>
@@ -382,14 +416,14 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   </div>
 </div>
 
-<!-- SKILLS -->
+<!-- ═══════════ SKILLS ═══════════ -->
 <div class="page" id="page-skills">
   <div class="page-header wrap">
     <p class="eyebrow">Fundamental Guitar Skills</p>
     <h1 class="display">Master the foundations</h1>
     <p class="lead skills-intro">Five core skills underpin everything in guitar. Select a skill, then choose your level to see exactly what you'll learn.</p>
     <div class="skill-tabs" id="skillTabs">
-      <button class="skill-tab active" data-skill="timing">Timing &amp; Rhythm</button>
+      <button class="skill-tab active" data-skill="timing">Timing & Rhythm</button>
       <button class="skill-tab" data-skill="transitions">Chord Transitions</button>
       <button class="skill-tab" data-skill="fretboard">Fretboard Navigation</button>
       <button class="skill-tab" data-skill="posture">Physical Posture</button>
@@ -399,12 +433,12 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <div class="wrap" style="padding-bottom:5rem;" id="skillContent"></div>
 </div>
 
-<!-- GALLERY -->
+<!-- ═══════════ GALLERY ═══════════ -->
 <div class="page" id="page-gallery">
   <div class="page-header wrap">
     <p class="eyebrow">Student community</p>
     <h1 class="display">Gallery of Students</h1>
-    <p class="lead">Every level, every age &mdash; real people who picked up a guitar and didn't stop.</p>
+    <p class="lead">Every level, every age — real people who picked up a guitar and didn't stop.</p>
     <div class="filter-bar">
       <button class="filter-btn active" data-gfilter="all">All students</button>
       <button class="filter-btn" data-gfilter="beginner">Beginner</button>
@@ -415,19 +449,19 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <div class="wrap"><div class="gallery-grid" id="galleryGrid"></div></div>
 </div>
 
-<!-- ABOUT -->
+<!-- ═══════════ ABOUT ═══════════ -->
 <div class="page" id="page-about">
   <div class="about-hero">
     <div>
       <p class="eyebrow">The story</p>
       <h1 class="display">Teaching guitar is our life's work</h1>
-      <p class="lead" style="margin-bottom:1.5rem;">We both picked up the guitar at age 9 and never put it down. Fretboard Academy was built because we saw too many beginners quit &mdash; not because guitar is hard, but because the way it's taught usually is.</p>
+      <p class="lead" style="margin-bottom:1.5rem;">We both picked up the guitar at age 9 and never put it down. Fretboard Academy was built because we saw too many beginners quit — not because guitar is hard, but because the way it's taught usually is.</p>
       <p style="color:var(--muted);font-size:0.9rem;line-height:1.7;">Every lesson here is designed around one question: what does someone actually need to know right now to sound better? Not what's traditionally taught first. What works. Based in Long Grove, Illinois, we've only taught a handful of students so far, but we're committed to helping as many people as possible learn guitar.</p>
     </div>
     <div class="about-visual">
       <div class="about-quote">Teaching isn't about knowing more.<br>It's about <em>explaining better.</em></div>
       <p class="about-bio">Two lifelong guitarists, playing since age 9, with one simple belief: anyone can learn to play if they're shown the right path in the right order.</p>
-      <div class="about-sig">&mdash; Mihir &amp; Ranvir</div>
+      <div class="about-sig">— Mihir &amp; Ranvir</div>
     </div>
   </div>
   <hr class="divider"/>
@@ -435,10 +469,10 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
     <p class="eyebrow">What we believe</p>
     <h2 class="display">Our values</h2>
     <div class="values-grid">
-      <div class="value-card"><div class="value-icon">&#127919;</div><h3>Progress over perfection</h3><p>Sounding good matters more than sounding correct. We build confidence before complexity.</p></div>
-      <div class="value-card"><div class="value-icon">&#128226;</div><h3>Sequence is everything</h3><p>The order you learn things in is more important than what you learn. We obsess over the right path.</p></div>
-      <div class="value-card"><div class="value-icon">&#127925;</div><h3>Music first, theory second</h3><p>You should be playing real songs within days &mdash; not drilling scales in a vacuum for months.</p></div>
-      <div class="value-card"><div class="value-icon">&#129309;</div><h3>No student left behind</h3><p>Struggling? Message us. Every plan includes direct access to a real instructor.</p></div>
+      <div class="value-card"><div class="value-icon">🎯</div><h3>Progress over perfection</h3><p>Sounding good matters more than sounding correct. We build confidence before complexity.</p></div>
+      <div class="value-card"><div class="value-icon">🔢</div><h3>Sequence is everything</h3><p>The order you learn things in is more important than what you learn. We obsess over the right path.</p></div>
+      <div class="value-card"><div class="value-icon">🎵</div><h3>Music first, theory second</h3><p>You should be playing real songs within days — not drilling scales in a vacuum for months.</p></div>
+      <div class="value-card"><div class="value-icon">🤝</div><h3>No student left behind</h3><p>Struggling? Message us. Every plan includes direct access to a real instructor.</p></div>
     </div>
   </div>
   <hr class="divider"/>
@@ -462,26 +496,33 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   </div>
 </div>
 
-<!-- CONTACT -->
+<!-- ═══════════ CONTACT ═══════════ -->
 <div class="page" id="page-contact">
   <div class="page-header wrap">
     <p class="eyebrow">Get in touch</p>
     <h1 class="display">We're here to help</h1>
-    <p class="lead">Whether you have a question, a lesson request, or just want to say hello &mdash; we respond to every message within 24 hours.</p>
+    <p class="lead">Whether you have a question, a lesson request, or just want to say hello — we respond to every message within 24 hours.</p>
   </div>
   <div class="contact-grid">
     <div>
-      <div class="contact-block"><h3>&#128231; Email us</h3><p><a href="mailto:fretboardacademyreal@gmail.com">fretboardacademyreal@gmail.com</a></p></div>
-      <div class="contact-block"><h3>&#128205; Based in</h3><p>Long Grove, Illinois</p></div>
-      <div class="contact-block"><h3>&#9201; Response time</h3><p>We reply to every message within 24 hours on weekdays. Pro members get priority support.</p></div>
-      <div class="contact-block"><h3>&#127758; Follow along</h3><div class="social-links"><a href="#" class="social-link">YouTube</a><a href="#" class="social-link">Instagram</a><a href="#" class="social-link">TikTok</a><a href="#" class="social-link">X</a></div></div>
+      <div class="contact-block"><h3>📧 Email us</h3><p><a href="mailto:fretboardacademyreal@gmail.com">fretboardacademyreal@gmail.com</a></p></div>
+      <div class="contact-block"><h3>📍 Based in</h3><p>Long Grove, Illinois</p></div>
+      <div class="contact-block"><h3>⏱ Response time</h3><p>We reply to every message within 24 hours on weekdays. Pro members get priority support.</p></div>
+      <div class="contact-block"><h3>🌐 Follow along</h3>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@FretBoardAcademy-c4u" class="social-link" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.instagram.com/fretboardacademyreal/" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@fretboardacademy" class="social-link" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://x.com/fretboardreal" class="social-link" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
+      </div>
       <div class="faq">
         <h3>Common questions</h3>
-        <div class="faq-item"><div class="faq-q">Do I need to own a guitar to start? <span class="arrow">&#9660;</span></div><div class="faq-a">You'll need a guitar to practice, but you can watch the first free lesson first to decide which type to buy.</div></div>
-        <div class="faq-item"><div class="faq-q">What if I'm a complete beginner? <span class="arrow">&#9660;</span></div><div class="faq-a">Perfect &mdash; that's who we design for first. Our beginner path assumes zero prior knowledge and gets you playing songs within the first week.</div></div>
-        <div class="faq-item"><div class="faq-q">Is there a money-back guarantee? <span class="arrow">&#9660;</span></div><div class="faq-a">Yes. If you complete 3 lessons and don't enjoy it, we'll refund you in full &mdash; no questions asked.</div></div>
-        <div class="faq-item"><div class="faq-q">Can I switch plans later? <span class="arrow">&#9660;</span></div><div class="faq-a">Absolutely. Upgrade or downgrade any time. We'll prorate the difference if you're mid-cycle.</div></div>
-        <div class="faq-item"><div class="faq-q">Do lessons work on mobile? <span class="arrow">&#9660;</span></div><div class="faq-a">Yes &mdash; everything is fully responsive. Many students watch on their phone or tablet while their guitar is in their hands.</div></div>
+        <div class="faq-item"><div class="faq-q">Do I need to own a guitar to start? <span class="arrow">▼</span></div><div class="faq-a">You'll need a guitar to practice, but you can watch the first free lesson first to decide which type to buy.</div></div>
+        <div class="faq-item"><div class="faq-q">What if I'm a complete beginner? <span class="arrow">▼</span></div><div class="faq-a">Perfect — that's who we design for first. Our beginner path assumes zero prior knowledge and gets you playing songs within the first week.</div></div>
+        <div class="faq-item"><div class="faq-q">Is there a money-back guarantee? <span class="arrow">▼</span></div><div class="faq-a">Yes. If you complete 3 lessons and don't enjoy it, we'll refund you in full — no questions asked.</div></div>
+        <div class="faq-item"><div class="faq-q">Can I switch plans later? <span class="arrow">▼</span></div><div class="faq-a">Absolutely. Upgrade or downgrade any time. We'll prorate the difference if you're mid-cycle.</div></div>
+        <div class="faq-item"><div class="faq-q">Do lessons work on mobile? <span class="arrow">▼</span></div><div class="faq-a">Yes — everything is fully responsive. Many students watch on their phone or tablet while their guitar is in their hands.</div></div>
       </div>
     </div>
     <div class="contact-form-box">
@@ -493,101 +534,161 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
           <div class="form-group"><label>Last name</label><input type="text" id="lname" placeholder="Cole"/></div>
         </div>
         <div class="form-group"><label>Email address</label><input type="email" id="femail" placeholder="you@example.com"/></div>
-        <div class="form-group"><label>Topic</label><select id="ftopic"><option value="">Select a topic&hellip;</option><option>General question</option><option>Lesson request</option><option>Enroll / pricing</option><option>Technical support</option><option>Billing</option><option>Just saying hello &#128075;</option></select></div>
+        <div class="form-group"><label>Topic</label><select id="ftopic"><option value="">Select a topic…</option><option>General question</option><option>Lesson request</option><option>Enroll / pricing</option><option>Technical support</option><option>Billing</option><option>Just saying hello 👋</option></select></div>
         <div class="form-group"><label>Message</label><textarea id="fmessage" placeholder="What's on your mind?"></textarea></div>
         <button class="btn-p" style="width:100%;" onclick="submitContact()">Send message</button>
       </div>
-      <div class="form-success" id="formSuccess"><div class="check">&#9989;</div><h4>Message sent!</h4><p>Thanks for reaching out. We'll reply to your email within 24 hours.</p></div>
+      <div class="form-success" id="formSuccess"><div class="check">✅</div><h4>Message sent!</h4><p>Thanks for reaching out. We'll reply to your email within 24 hours.</p></div>
     </div>
   </div>
 </div>
 
-<!-- START / PRICING -->
+<!-- ═══════════ START / PRICING ═══════════ -->
 <div class="page" id="page-start">
   <div class="start-hero">
     <p class="eyebrow">Your journey starts here</p>
     <h1 class="display">Choose your plan</h1>
-    <p>Your first lesson is free &mdash; no card needed. Not happy after 3 lessons? We'll refund you in full.</p>
+    <p>Your first lesson is free — no card needed. Not happy after 3 lessons? We'll refund you in full.</p>
   </div>
+
   <div class="guarantee-box">
     <div class="guarantee-inner">
-      <div class="guarantee-icon">&#128737;</div>
+      <div class="guarantee-icon">🛡️</div>
       <div>
         <h4>Money-back guarantee</h4>
-        <p>Try 3 lessons. If you don't enjoy the experience, email us and we'll refund every cent &mdash; no questions asked, no hoops to jump through.</p>
+        <p>Try 3 lessons. If you don't enjoy the experience, email us and we'll refund every cent — no questions asked, no hoops to jump through.</p>
       </div>
     </div>
   </div>
+
+  <!-- IN-PERSON PRICING -->
   <div class="wrap" style="padding-bottom:1rem;">
     <p class="eyebrow">In-Person Lessons</p>
     <h2 class="display">Face-to-face in Long Grove, IL</h2>
-    <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;max-width:560px;margin-bottom:2.5rem;">Learn with Mihir or Ranvir in person. Nothing beats hands-on instruction &mdash; we'll correct your posture, technique, and tone in real time.</p>
+    <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;max-width:560px;margin-bottom:2.5rem;">Learn with Mihir or Ranvir in person. Nothing beats hands-on instruction — we'll correct your posture, technique, and tone in real time.</p>
   </div>
   <div class="plan-grid">
     <div class="plan-card">
       <div class="plan-name">Single Lesson</div>
       <div class="plan-price">$25 <span>/ lesson</span></div>
       <p class="plan-desc">Try a session before committing. Great for a specific skill you want to nail.</p>
-      <ul class="plan-features"><li>1 in-person lesson</li><li>First lesson free</li><li>Direct instructor feedback</li><li class="no">Lesson history library</li><li class="no">Priority scheduling</li></ul>
+      <ul class="plan-features">
+        <li>1 in-person lesson</li>
+        <li>First lesson free</li>
+        <li>Direct instructor feedback</li>
+        <li class="no">Lesson history library</li>
+        <li class="no">Priority scheduling</li>
+      </ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
+
     <div class="plan-card featured">
       <div class="plan-badge">Best value</div>
-      <div class="plan-name">Monthly &mdash; 4 Lessons</div>
+      <div class="plan-name">Monthly — 4 Lessons</div>
       <div class="plan-price">$90 <span>/ month</span></div>
       <p class="plan-desc">One lesson a week. The most consistent way to build real progress.</p>
-      <ul class="plan-features"><li>4 in-person lessons per month</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li class="no">Priority scheduling</li></ul>
+      <ul class="plan-features">
+        <li>4 in-person lessons per month</li>
+        <li>First lesson free</li>
+        <li>Direct instructor feedback</li>
+        <li>Lesson history library</li>
+        <li class="no">Priority scheduling</li>
+      </ul>
       <button class="btn-p plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
+
     <div class="plan-card">
       <div class="plan-name">3-Month Pack</div>
       <div class="plan-price">$260 <span>/ 3 mo.</span></div>
       <p class="plan-desc">Commit to a quarter and save. Ideal for beginners ready to level up fast.</p>
-      <ul class="plan-features"><li>~12 in-person lessons</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li class="no">Priority scheduling</li></ul>
+      <ul class="plan-features">
+        <li>~12 in-person lessons</li>
+        <li>First lesson free</li>
+        <li>Direct instructor feedback</li>
+        <li>Lesson history library</li>
+        <li class="no">Priority scheduling</li>
+      </ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
+
     <div class="plan-card">
       <div class="plan-name">6-Month Pack</div>
       <div class="plan-price">$500 <span>/ 6 mo.</span></div>
       <p class="plan-desc">The full in-person journey. Go from wherever you are to genuinely confident.</p>
-      <ul class="plan-features"><li>~24 in-person lessons</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li>Priority scheduling</li></ul>
+      <ul class="plan-features">
+        <li>~24 in-person lessons</li>
+        <li>First lesson free</li>
+        <li>Direct instructor feedback</li>
+        <li>Lesson history library</li>
+        <li>Priority scheduling</li>
+      </ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
   </div>
+
   <hr class="divider" style="margin:1rem 0 3rem;"/>
+
+  <!-- ONLINE PRICING -->
   <div class="wrap" style="padding-bottom:1rem;">
     <p class="eyebrow">Online Lessons</p>
     <h2 class="display">Learn from anywhere</h2>
-    <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;max-width:560px;margin-bottom:2.5rem;">Same instructors, same curriculum &mdash; streamed live to wherever you are. Perfect if you're outside the Long Grove area or prefer learning from home.</p>
+    <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;max-width:560px;margin-bottom:2.5rem;">Same instructors, same curriculum — streamed live to wherever you are. Perfect if you're outside the Long Grove area or prefer learning from home.</p>
   </div>
   <div class="plan-grid" style="padding-bottom:5rem;">
     <div class="plan-card">
       <div class="plan-name">Single Lesson</div>
       <div class="plan-price">$20 <span>/ lesson</span></div>
       <p class="plan-desc">Drop in for one session. Perfect for trying things out or a focused skill.</p>
-      <ul class="plan-features"><li>1 live online lesson</li><li>First lesson free</li><li>Direct instructor feedback</li><li class="no">Lesson history library</li><li class="no">Priority scheduling</li></ul>
+      <ul class="plan-features">
+        <li>1 live online lesson</li>
+        <li>First lesson free</li>
+        <li>Direct instructor feedback</li>
+        <li class="no">Lesson history library</li>
+        <li class="no">Priority scheduling</li>
+      </ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
+
     <div class="plan-card featured">
       <div class="plan-badge">Best value</div>
-      <div class="plan-name">Monthly &mdash; 4 Lessons</div>
+      <div class="plan-name">Monthly — 4 Lessons</div>
       <div class="plan-price">$75 <span>/ month</span></div>
       <p class="plan-desc">One lesson a week, fully online. The most effective way to build progress.</p>
-      <ul class="plan-features"><li>4 live online lessons per month</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li class="no">Priority scheduling</li></ul>
+      <ul class="plan-features">
+        <li>4 live online lessons per month</li>
+        <li>First lesson free</li>
+        <li>Direct instructor feedback</li>
+        <li>Lesson history library</li>
+        <li class="no">Priority scheduling</li>
+      </ul>
       <button class="btn-p plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
+
     <div class="plan-card">
       <div class="plan-name">3-Month Pack</div>
       <div class="plan-price">$225 <span>/ 3 mo.</span></div>
       <p class="plan-desc">Commit to a quarter of online lessons and save. Great for dedicated learners.</p>
-      <ul class="plan-features"><li>~12 live online lessons</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li class="no">Priority scheduling</li></ul>
+      <ul class="plan-features">
+        <li>~12 live online lessons</li>
+        <li>First lesson free</li>
+        <li>Direct instructor feedback</li>
+        <li>Lesson history library</li>
+        <li class="no">Priority scheduling</li>
+      </ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
+
     <div class="plan-card">
       <div class="plan-name">6-Month Pack</div>
       <div class="plan-price">$450 <span>/ 6 mo.</span></div>
       <p class="plan-desc">The full online journey. Six months of structured lessons to transform your playing.</p>
-      <ul class="plan-features"><li>~24 live online lessons</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li>Priority scheduling</li></ul>
+      <ul class="plan-features">
+        <li>~24 live online lessons</li>
+        <li>First lesson free</li>
+        <li>Direct instructor feedback</li>
+        <li>Lesson history library</li>
+        <li>Priority scheduling</li>
+      </ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
   </div>
@@ -604,12 +705,12 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
       <li><a href="#" data-page="about">About</a></li>
       <li><a href="#" data-page="contact">Contact</a></li>
     </ul>
-    <div class="footer-copy">&copy; 2026 Fretboard Academy &middot; Long Grove, IL</div>
+    <div class="footer-copy">© 2026 Fretboard Academy · Long Grove, IL</div>
   </div>
 </footer>
 
 <script>
-/* NAVIGATION */
+/* ─── NAVIGATION ─────────────────────────────────────────── */
 function showPage(name){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+name).classList.add('active');
@@ -628,9 +729,10 @@ document.getElementById('hamburger').addEventListener('click',()=>{
   document.getElementById('mobileMenu').style.display=mobileOpen?'flex':'none';
 });
 
-/* CHORD DIAGRAM */
+/* ─── CHORD DIAGRAM ──────────────────────────────────────── */
 const SX=[35,73,111,149,187,225];
 const FY={1:69,2:119,3:169,4:219};
+
 const CHORDS={
   G:{dots:[{s:0,f:2},{s:1,f:2},{s:5,f:3}],open:[2,3,4],muted:[]},
   C:{dots:[{s:1,f:3},{s:2,f:2},{s:4,f:1}],open:[3,5],muted:[0]},
@@ -639,6 +741,7 @@ const CHORDS={
   Am:{dots:[{s:2,f:2},{s:3,f:2},{s:4,f:1}],open:[1,5],muted:[0]},
   A:{dots:[{s:2,f:2},{s:3,f:2},{s:4,f:2}],open:[1,5],muted:[0]}
 };
+
 function renderChord(key){
   const chord=CHORDS[key];
   const g=document.getElementById('dots');
@@ -650,7 +753,7 @@ function renderChord(key){
     t.setAttribute('x',SX[s]);t.setAttribute('y',30);
     t.setAttribute('text-anchor','middle');t.setAttribute('font-size','15');
     t.setAttribute('fill','#5A6F8A');t.setAttribute('font-family','Inter,sans-serif');
-    t.setAttribute('font-weight','700');t.textContent='\u00d7';
+    t.setAttribute('font-weight','700');t.textContent='×';
     g.appendChild(t);
   });
   chord.open.forEach(s=>{
@@ -664,14 +767,15 @@ function renderChord(key){
     const circle=document.createElementNS(ns,'circle');
     circle.setAttribute('cx',x);circle.setAttribute('cy',y);circle.setAttribute('r',14);
     circle.setAttribute('fill','#F5A623');circle.setAttribute('opacity','0.93');
-    circle.style.cssText='transform:scale(0);transform-origin:'+x+'px '+y+'px;transition:transform 0.25s cubic-bezier(.34,1.56,.64,1);';
+    circle.style.cssText=`transform:scale(0);transform-origin:${x}px ${y}px;transition:transform 0.25s cubic-bezier(.34,1.56,.64,1);`;
     g.appendChild(circle);
     requestAnimationFrame(()=>{circle.style.transform='scale(1)';});
   });
   const nameEl=document.getElementById('chordName');
   if(nameEl)nameEl.textContent=key;
 }
-document.getElementById('chordButtons')&&document.getElementById('chordButtons').addEventListener('click',e=>{
+
+document.getElementById('chordButtons')?.addEventListener('click',e=>{
   const btn=e.target.closest('.chord-btn');
   if(!btn)return;
   document.querySelectorAll('.chord-btn').forEach(b=>b.classList.remove('active'));
@@ -680,12 +784,10 @@ document.getElementById('chordButtons')&&document.getElementById('chordButtons')
 });
 renderChord('G');
 
-/* ── REVIEWS: SHARED PERSISTENT STORAGE ───────────────────
-   Reviews are saved with window.storage (shared=true) so they
-   live server-side and are visible to every user on every device.
-   Key: "fa_reviews_v1"
-*/
-const STORAGE_KEY='fa_reviews_v1';
+/* ─── REVIEWS — SHARED PERSISTENT STORAGE ───────────────── */
+// Reviews are stored via window.storage (shared=true) so every visitor
+// on every device sees the same set of reviews.
+
 const DEFAULT_REVIEWS=[
   {initials:'CM',name:'Cole M.',detail:'Playing for 6+ months',stars:5,
    text:'I was at school of rock but I did not like the structure and when I found out about fretboard academy, I thought it was just another bad program. but when I signed up, I loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way that I enjoyed it.'},
@@ -694,50 +796,61 @@ const DEFAULT_REVIEWS=[
   {initials:'A',name:'Anonymous',detail:'Recent student',stars:5,text:'Great quality for being so cheap!'},
 ];
 
+let REVIEWS=[...DEFAULT_REVIEWS];
+
 async function loadReviews(){
   try{
-    const result=await window.storage.get(STORAGE_KEY,true);
-    if(result&&result.value) return JSON.parse(result.value);
-  }catch(e){}
-  // First visit: seed shared storage with defaults
-  try{ await window.storage.set(STORAGE_KEY,JSON.stringify(DEFAULT_REVIEWS),true); }catch(e){}
-  return DEFAULT_REVIEWS;
+    const result=await window.storage.get('fa_reviews_shared',true);
+    if(result && result.value){
+      const parsed=JSON.parse(result.value);
+      if(Array.isArray(parsed) && parsed.length>0){
+        REVIEWS=parsed;
+      }
+    }
+  }catch(e){
+    // Key doesn't exist yet or storage unavailable — use defaults
+    REVIEWS=[...DEFAULT_REVIEWS];
+  }
+  buildTestimonials();
 }
 
 async function saveReviews(arr){
-  try{ await window.storage.set(STORAGE_KEY,JSON.stringify(arr),true); }catch(e){console.error('storage save failed',e);}
+  try{
+    await window.storage.set('fa_reviews_shared',JSON.stringify(arr),true);
+  }catch(e){
+    console.warn('Could not save reviews to shared storage:',e);
+  }
 }
 
-function starsHTML(n){return '\u2605'.repeat(n)+'\u2606'.repeat(5-n);}
+function starsHTML(n){return '★'.repeat(n)+'☆'.repeat(5-n);}
 
-function renderTestimonials(reviews){
+function buildTestimonials(){
   const wrap=document.getElementById('homeTesti');
   if(!wrap)return;
-  if(!reviews||!reviews.length){
-    wrap.innerHTML='<p class="testi-loading">No reviews yet \u2014 be the first!</p>';
-    return;
-  }
-  wrap.innerHTML=reviews.map(r=>`
+  wrap.innerHTML=REVIEWS.map(r=>`
     <div class="testi">
       <div class="stars">${starsHTML(r.stars)}</div>
-      <blockquote>\u201c${r.text}\u201d</blockquote>
+      <blockquote>"${r.text}"</blockquote>
       <div class="testi-author">
         <div class="avatar">${r.initials}</div>
         <div><div class="author-name">${r.name}</div><div class="author-detail">${r.detail}</div></div>
       </div>
-    </div>`).join('');
+    </div>
+  `).join('');
 }
 
-// Load on page init
-loadReviews().then(renderTestimonials);
+// Load reviews on page init
+loadReviews();
 
-/* REVIEW SUBMISSION */
+/* ─── REVIEW SUBMISSION ──────────────────────────────────── */
 let selectedStars=5;
-document.getElementById('starSelect')&&document.getElementById('starSelect').addEventListener('click',e=>{
+document.getElementById('starSelect')?.addEventListener('click',e=>{
   const btn=e.target.closest('[data-star]');
   if(!btn)return;
   selectedStars=parseInt(btn.dataset.star);
-  document.querySelectorAll('#starSelect button').forEach((b,i)=>b.classList.toggle('lit',i<selectedStars));
+  document.querySelectorAll('#starSelect button').forEach((b,i)=>{
+    b.classList.toggle('lit',i<selectedStars);
+  });
 });
 document.querySelectorAll('#starSelect button').forEach(b=>b.classList.add('lit'));
 
@@ -746,141 +859,148 @@ async function submitReview(){
   const months=document.getElementById('rmonths').value.trim();
   const text=document.getElementById('rtext').value.trim();
   if(!name||!text){alert('Please fill in your name and review.');return;}
-  const btn=document.getElementById('submitReviewBtn');
-  btn.disabled=true;btn.textContent='Saving\u2026';
   const newReview={initials:name.slice(0,2).toUpperCase(),name,detail:months||'Recent student',stars:selectedStars,text};
-  let reviews=await loadReviews();
-  reviews.unshift(newReview);
-  reviews.sort((a,b)=>b.stars-a.stars);
-  await saveReviews(reviews);
-  renderTestimonials(reviews);
+  REVIEWS.unshift(newReview);
+  REVIEWS.sort((a,b)=>b.stars-a.stars);
+  await saveReviews(REVIEWS);
+  buildTestimonials();
   document.getElementById('reviewFormInner').style.display='none';
   document.getElementById('reviewSubmitted').style.display='block';
 }
 
-/* SKILLS DATA */
+/* ─── SKILLS DATA ────────────────────────────────────────── */
 const SKILLS={
-  timing:{name:'Timing & Rhythm',desc:'Rhythm is the heartbeat of music. Before notes, before chords \u2014 if your timing is off, nothing sounds right. This skill teaches you to feel and control time.',
+  timing:{
+    name:'Timing & Rhythm',
+    desc:'Rhythm is the heartbeat of music. Before notes, before chords — if your timing is off, nothing sounds right. This skill teaches you to feel and control time.',
     levels:{
       beginner:[
-        {title:'Counting beats in 4/4 time',desc:'Learn to count \u201c1-2-3-4\u201d out loud while playing, internalizing the pulse that anchors everything you play.'},
+        {title:'Counting beats in 4/4 time',desc:'Learn to count "1-2-3-4" out loud while playing, internalizing the pulse that anchors everything you play.'},
         {title:'Clapping along to a metronome',desc:'Use a metronome at 60 BPM to train your internal clock. Clapping before strumming builds the habit.'},
-        {title:'Simple down-strum patterns',desc:'Master a steady all-downstroke strum on every beat \u2014 the foundation before any syncopation.'},
-        {title:'Recognizing downbeats vs upbeats',desc:'Feel the difference between the strong downbeat (1,3) and the lighter upbeat (the \u201cands\u201d). Essential for groove.'},
+        {title:'Simple down-strum patterns',desc:'Master a steady all-downstroke strum on every beat — the foundation before any syncopation.'},
+        {title:'Recognizing downbeats vs upbeats',desc:'Feel the difference between the strong downbeat (1,3) and the lighter upbeat (the "ands"). Essential for groove.'},
         {title:'Playing in time with a backing track',desc:'Apply your timing to a real chord progression with drums. The moment it clicks feels like magic.'},
       ],
       intermediate:[
         {title:'Syncopated strumming patterns',desc:'Skip beats and accent the upbeats to create the rhythmic feel behind reggae, pop, and R&B.'},
         {title:'16th-note subdivision',desc:'Feel four pulses per beat. This unlocks funky strumming and faster picking patterns.'},
-        {title:'Playing with a drum loop',desc:'Lock into a live drum groove \u2014 more challenging than a metronome and closer to real playing.'},
-        {title:'Triplet feel and shuffle rhythm',desc:'The swing feel behind blues and jazz. Learn to \u201cswing\u201d eighth notes so they bounce.'},
+        {title:'Playing with a drum loop',desc:'Lock into a live drum groove — more challenging than a metronome and closer to real playing.'},
+        {title:'Triplet feel and shuffle rhythm',desc:'The swing feel behind blues and jazz. Learn to "swing" eighth notes so they bounce.'},
         {title:'Varying dynamics within a rhythm',desc:'Play the same pattern louder and softer within a phrase to add expression and shape.'},
       ],
       advanced:[
-        {title:'Polyrhythm: 3-against-2',desc:'Play three evenly spaced notes against two \u2014 the basic polyrhythm used in Afrobeat and classical music.'},
+        {title:'Polyrhythm: 3-against-2',desc:'Play three evenly spaced notes against two — the basic polyrhythm used in Afrobeat and classical music.'},
         {title:'Odd time signatures (5/4, 7/8)',desc:'Navigate irregular meter without losing the groove. Made famous by Tool, Dave Brubeck, and Radiohead.'},
-        {title:'Metric modulation',desc:'Shift your perceived tempo by redefining the beat subdivision \u2014 a sophisticated tool for advanced players.'},
+        {title:'Metric modulation',desc:'Shift your perceived tempo by redefining the beat subdivision — a sophisticated tool for advanced players.'},
         {title:'Rhythmic displacement',desc:'Take a phrase and shift it one beat later in the bar, creating a surprising, floating feel.'},
-        {title:'Recording and analyzing your own timing',desc:'Use a DAW to see exactly where your hits land vs the grid \u2014 the fastest way to identify and fix drift.'},
+        {title:'Recording and analyzing your own timing',desc:'Use a DAW to see exactly where your hits land vs the grid — the fastest way to identify and fix drift.'},
       ],
     }
   },
-  transitions:{name:'Chord Transitions',desc:'Clean, fast chord changes separate beginners from players who actually sound good. This skill is pure technique \u2014 finger efficiency, muscle memory, and pivot points.',
+  transitions:{
+    name:'Chord Transitions',
+    desc:'Clean, fast chord changes separate beginners from players who actually sound good. This skill is pure technique — finger efficiency, muscle memory, and pivot points.',
     levels:{
       beginner:[
         {title:'The pivot finger technique',desc:'Keep one finger anchored between chords when possible to dramatically reduce movement and transition time.'},
-        {title:'G to C to D \u2014 the big three',desc:'The most common chord change sequence in pop and rock. Drill these three until they\'re automatic.'},
+        {title:'G to C to D — the big three',desc:'The most common chord change sequence in pop and rock. Drill these three until they\'re automatic.'},
         {title:'Looking ahead while playing',desc:'Train your brain to think one chord ahead so your fingers are already moving before you need them.'},
         {title:'Slow-motion chord change drill',desc:'Move between chords at a snail\'s pace, placing all fingers simultaneously. Speed comes after accuracy.'},
         {title:'One-minute changes exercise',desc:'Count how many times you can switch between two chords in 60 seconds. Track progress weekly.'},
       ],
       intermediate:[
         {title:'Barre chord transitions',desc:'Sliding a barre chord shape up and down the neck cleanly without buzzing or gaps in sound.'},
-        {title:'Transitions from open to barre chords',desc:'The hardest jump for intermediate players \u2014 from a relaxed open shape into a demanding barre.'},
+        {title:'Transitions from open to barre chords',desc:'The hardest jump for intermediate players — from a relaxed open shape into a demanding barre.'},
         {title:'Transitioning to sus and add chords',desc:'Add color with Dsus2, Cadd9, and similar shapes that connect smoothly to their parent chords.'},
-        {title:'Economy of motion analysis',desc:'Film your fretting hand and identify unnecessary movement \u2014 every millimeter saved speeds up your transitions.'},
+        {title:'Economy of motion analysis',desc:'Film your fretting hand and identify unnecessary movement — every millimeter saved speeds up your transitions.'},
         {title:'Chord transitions under tempo pressure',desc:'Use a metronome that increases BPM every 4 bars, forcing you to adapt under increasing pressure.'},
       ],
       advanced:[
-        {title:'Jazz voicing transitions',desc:'Move between complex 7th, 9th, and 13th chord shapes with smooth voice leading \u2014 minimizing motion between notes.'},
+        {title:'Jazz voicing transitions',desc:'Move between complex 7th, 9th, and 13th chord shapes with smooth voice leading — minimizing motion between notes.'},
         {title:'Three-chord jazzy movement in multiple keys',desc:'Transpose the ii-V-I progression across all 12 keys and practice the transitions until they\'re fluid everywhere.'},
-        {title:'Simultaneous melody + chord transitions',desc:'Hold chord shapes while playing a moving melody line on top \u2014 the Travis picking and chord-melody technique.'},
-        {title:'Rapid-fire progression training',desc:'12-chord progressions at high tempo \u2014 the kind of changes you\'d face in a real gigging situation.'},
+        {title:'Simultaneous melody + chord transitions',desc:'Hold chord shapes while playing a moving melody line on top — the Travis picking and chord-melody technique.'},
+        {title:'Rapid-fire progression training',desc:'12-chord progressions at high tempo — the kind of changes you\'d face in a real gigging situation.'},
         {title:'Connecting chords with chromatic passing tones',desc:'Use single notes between chord changes to create smooth, professional-sounding harmonic movement.'},
       ],
     }
   },
-  fretboard:{name:'Fretboard Navigation',desc:'Most players know a few shapes in one area of the neck. Fretboard navigation means knowing every note, connecting patterns, and playing freely anywhere.',
+  fretboard:{
+    name:'Fretboard Navigation',
+    desc:'Most players know a few shapes in one area of the neck. Fretboard navigation means knowing every note, connecting patterns, and playing freely anywhere.',
     levels:{
       beginner:[
-        {title:'Learning the open string names',desc:'Memorize E-A-D-G-B-e. Use the phrase \u201cEvery Alligator Does Get Big Eventually\u201d if it helps.'},
+        {title:'Learning the open string names',desc:'Memorize E-A-D-G-B-e. Use the phrase "Every Alligator Does Get Big Eventually" if it helps.'},
         {title:'Natural notes on the low E string',desc:'Learn every natural note (no sharps/flats) on string 6 up to fret 12. The foundation of navigation.'},
         {title:'The chromatic scale explained',desc:'Understand that each fret is one half-step, and there are 12 notes that repeat across the octave.'},
         {title:'Finding octaves on adjacent strings',desc:'Every note has a simple 2-fret-up, 2-strings-across shape on most string pairs. Use it to find notes fast.'},
-        {title:'The major scale in first position',desc:'Learn the C major scale in open position \u2014 your first map of how notes connect on the fretboard.'},
+        {title:'The major scale in first position',desc:'Learn the C major scale in open position — your first map of how notes connect on the fretboard.'},
       ],
       intermediate:[
         {title:'CAGED system introduction',desc:'The five chord shapes (C-A-G-E-D) repeat across the neck, giving you a framework to find any chord anywhere.'},
         {title:'Pentatonic scale in all 5 positions',desc:'Move the minor pentatonic shape to all five positions and connect them across the full neck.'},
-        {title:'Notes on all 6 strings up to fret 12',desc:'Systematic memorization of every note. Spot-test yourself daily \u2014 it takes 2-3 weeks to lock in.'},
-        {title:'Connecting scale shapes across positions',desc:'Practice \u201cslides\u201d between pentatonic boxes so you can move across the neck fluidly during solos.'},
-        {title:'Playing a melody in multiple positions',desc:'Take a simple melody and learn to play it in at least three places on the neck \u2014 same notes, different feel.'},
+        {title:'Notes on all 6 strings up to fret 12',desc:'Systematic memorization of every note. Spot-test yourself daily — it takes 2-3 weeks to lock in.'},
+        {title:'Connecting scale shapes across positions',desc:'Practice "slides" between pentatonic boxes so you can move across the neck fluidly during solos.'},
+        {title:'Playing a melody in multiple positions',desc:'Take a simple melody and learn to play it in at least three places on the neck — same notes, different feel.'},
       ],
       advanced:[
-        {title:'Three-notes-per-string scale patterns',desc:'The scale shapes used by shred guitarists \u2014 wider stretches but faster, more linear movement across the neck.'},
+        {title:'Three-notes-per-string scale patterns',desc:'The scale shapes used by shred guitarists — wider stretches but faster, more linear movement across the neck.'},
         {title:'Horizontal vs vertical playing',desc:'Most players play vertically (within a box). Learn to run scales horizontally across the string for a different sound.'},
-        {title:'Superimposing scales over chord changes',desc:'Know which scale fits which chord in a progression and switch fluidly \u2014 the core of advanced improvisation.'},
-        {title:'Chord-tone soloing (arpeggios)',desc:'Target the notes of each chord (root, 3rd, 5th, 7th) as the chord changes \u2014 makes solos sound intentionally melodic.'},
-        {title:'Full fretboard visualization in real time',desc:'Develop the ability to see note names, scale degrees, and chord tones simultaneously \u2014 the hallmark of a master.'},
+        {title:'Superimposing scales over chord changes',desc:'Know which scale fits which chord in a progression and switch fluidly — the core of advanced improvisation.'},
+        {title:'Chord-tone soloing (arpeggios)',desc:'Target the notes of each chord (root, 3rd, 5th, 7th) as the chord changes — makes solos sound intentionally melodic.'},
+        {title:'Full fretboard visualization in real time',desc:'Develop the ability to see note names, scale degrees, and chord tones simultaneously — the hallmark of a master.'},
       ],
     }
   },
-  posture:{name:'Physical Posture',desc:'Bad posture causes pain, limits speed, and creates habits that take years to undo. Correct technique from day one makes everything else easier.',
+  posture:{
+    name:'Physical Posture',
+    desc:'Bad posture causes pain, limits speed, and creates habits that take years to undo. Correct technique from day one makes everything else easier.',
     levels:{
       beginner:[
-        {title:'Seated playing position (classical vs casual)',desc:'Learn both the classical leg-raised position and the casual position \u2014 when to use each and why it matters.'},
+        {title:'Seated playing position (classical vs casual)',desc:'Learn both the classical leg-raised position and the casual position — when to use each and why it matters.'},
         {title:'Guitar body placement on your lap',desc:'The guitar waist sits on your strumming-arm leg, body close to your torso. Tilting the neck up slightly helps.'},
-        {title:'Fretting hand thumb placement',desc:'Thumb goes behind the neck, roughly behind your middle finger \u2014 not gripping over the top like a baseball bat.'},
+        {title:'Fretting hand thumb placement',desc:'Thumb goes behind the neck, roughly behind your middle finger — not gripping over the top like a baseball bat.'},
         {title:'Wrist and elbow alignment for the fretting hand',desc:'Keep the wrist relatively straight. A curved wrist helps fingertips press strings cleanly and prevents tendinitis.'},
-        {title:'Relaxed shoulders and arms',desc:'Tension is the enemy. Check your shoulders every few minutes \u2014 they should be down, not hunched toward your ears.'},
+        {title:'Relaxed shoulders and arms',desc:'Tension is the enemy. Check your shoulders every few minutes — they should be down, not hunched toward your ears.'},
       ],
       intermediate:[
-        {title:'Standing with a strap \u2014 correct height',desc:'Strap height affects everything. The guitar should sit at roughly the same height standing as it does sitting.'},
+        {title:'Standing with a strap — correct height',desc:'Strap height affects everything. The guitar should sit at roughly the same height standing as it does sitting.'},
         {title:'Pick angle and attack',desc:'Slight down-angling of the pick reduces resistance, allowing smoother alternate picking and a better tone.'},
-        {title:'Efficient fretting-hand finger curvature',desc:'Curved fingers let the fingertip press strings rather than the flat pad \u2014 cleaner sound, fewer muted strings.'},
-        {title:'Right-hand anchoring techniques',desc:'Whether floating, anchoring on the bridge, or resting a finger on the body \u2014 each has tonal and ergonomic tradeoffs.'},
+        {title:'Efficient fretting-hand finger curvature',desc:'Curved fingers let the fingertip press strings rather than the flat pad — cleaner sound, fewer muted strings.'},
+        {title:'Right-hand anchoring techniques',desc:'Whether floating, anchoring on the bridge, or resting a finger on the body — each has tonal and ergonomic tradeoffs.'},
         {title:'Recognizing and releasing tension during playing',desc:'Learn to audit yourself mid-song: check wrist, shoulder, jaw. Tension accumulates silently until it becomes injury.'},
       ],
       advanced:[
-        {title:'Extended technique posture (fingerstyle)',desc:'Classical fingerstyle requires free stroke vs rest stroke, nail angle, and hand arch \u2014 all posture-driven.'},
+        {title:'Extended technique posture (fingerstyle)',desc:'Classical fingerstyle requires free stroke vs rest stroke, nail angle, and hand arch — all posture-driven.'},
         {title:'Multi-hour performance endurance',desc:'Playing a 2-hour gig without pain requires conditioning, stretch routines, and knowing when to back off.'},
         {title:'Injury prevention and recovery principles',desc:'Repetitive strain injuries are common in guitarists. Learn the warning signs of tendinitis, carpal tunnel, and overuse.'},
         {title:'Adapting posture for different guitar types',desc:'Classical, acoustic, and electric all demand slightly different body mechanics. Switching between them cleanly is a skill.'},
-        {title:'Breathing and body awareness during performance',desc:'Advanced performers consciously breathe to manage stage tension \u2014 it directly affects timing and muscle control.'},
+        {title:'Breathing and body awareness during performance',desc:'Advanced performers consciously breathe to manage stage tension — it directly affects timing and muscle control.'},
       ],
     }
   },
-  tone:{name:'Tonal Control',desc:'Two guitarists playing the same chord can sound completely different. Tonal control is what separates \u201cplaying notes\u201d from \u201cmaking music.\u201d',
+  tone:{
+    name:'Tonal Control',
+    desc:'Two guitarists playing the same chord can sound completely different. Tonal control is what separates "playing notes" from "making music."',
     levels:{
       beginner:[
         {title:'Pick pressure and attack angle',desc:'Harder pick attack = louder, brighter. Softer = quieter, warmer. This is your first dynamic tool.'},
-        {title:'Fretting pressure and clean notes',desc:'Press just hard enough to sound the note cleanly \u2014 over-pressing causes sharp intonation and sore fingers.'},
+        {title:'Fretting pressure and clean notes',desc:'Press just hard enough to sound the note cleanly — over-pressing causes sharp intonation and sore fingers.'},
         {title:'Fingertip vs flat pad fretting',desc:'Fingertips produce cleaner, brighter tone. Flat pads mute adjacent strings and muddy your sound.'},
         {title:'Muting unwanted strings',desc:'Resting unused fingers gently on strings you don\'t want to ring prevents accidental buzzing and noise.'},
         {title:'Strumming near the bridge vs neck',desc:'Strumming near the bridge is brighter and twangier. Near the neck is warmer and fuller. Explore the spectrum.'},
       ],
       intermediate:[
         {title:'Vibrato technique and control',desc:'Vibrato is pitch oscillation applied to held notes. Width and speed determine whether it sounds bluesy, classical, or operatic.'},
-        {title:'Hammer-ons and pull-offs for legato tone',desc:'Playing notes without picking creates a smoother, more connected sound \u2014 called legato. Essential for melodic solos.'},
-        {title:'Bending in tune',desc:'Bending a string raises pitch. The goal is bending exactly to the target pitch \u2014 usually a half or whole step.'},
+        {title:'Hammer-ons and pull-offs for legato tone',desc:'Playing notes without picking creates a smoother, more connected sound — called legato. Essential for melodic solos.'},
+        {title:'Bending in tune',desc:'Bending a string raises pitch. The goal is bending exactly to the target pitch — usually a half or whole step.'},
         {title:'Controlling note sustain',desc:'How long a note rings depends on pick attack, fret pressure, and amp settings. Learn to shape sustain intentionally.'},
-        {title:'Using guitar volume and tone knobs',desc:'Rolling the guitar\'s own volume knob changes tone as well as volume \u2014 an overlooked expressive tool on any guitar.'},
+        {title:'Using guitar volume and tone knobs',desc:'Rolling the guitar\'s own volume knob changes tone as well as volume — an overlooked expressive tool on any guitar.'},
       ],
       advanced:[
         {title:'Hybrid picking for tonal variety',desc:'Using pick + middle and ring fingers simultaneously to blend sharp pick attack with warm finger tone in one phrase.'},
         {title:'Natural harmonics and tone colors',desc:'Lightly touching the string at fret 5, 7, or 12 produces bell-like harmonic tones not possible any other way.'},
         {title:'Amp EQ and how it shapes your tone',desc:'Bass, mid, and treble controls on your amp interact with your picking technique. Learn what each does to your sound.'},
-        {title:'Pinch harmonics and artificial harmonics',desc:'Advanced techniques for adding high-pitched \u201csqueal\u201d tones \u2014 a staple of rock and country lead playing.'},
+        {title:'Pinch harmonics and artificial harmonics',desc:'Advanced techniques for adding high-pitched "squeal" tones — a staple of rock and country lead playing.'},
         {title:'Expressive dynamics across a full performance',desc:'The best players vary from near-silent to full-blast within a single song. Learn to plan and execute dynamic arcs.'},
       ],
     }
@@ -904,21 +1024,27 @@ function buildSkillContent(skillKey){
             <div class="skill-item">
               <div class="skill-num">${i+1}</div>
               <div><h4>${item.title}</h4><p>${item.desc}</p></div>
-            </div>`).join('')}
+            </div>
+          `).join('')}
         </div>
-      </div>`).join('')}`;
+      </div>
+    `).join('')}
+  `;
   wrap.querySelectorAll('.level-tab').forEach(btn=>{
     btn.addEventListener('click',()=>{
       wrap.querySelectorAll('.level-tab').forEach(b=>{b.classList.remove('active','beg','int','adv');});
       btn.classList.add('active');
       const lv=btn.dataset.level;
-      btn.classList.add(lv==='beginner'?'beg':lv==='intermediate'?'int':'adv');
+      if(lv==='beginner')btn.classList.add('beg');
+      else if(lv==='intermediate')btn.classList.add('int');
+      else btn.classList.add('adv');
       wrap.querySelectorAll('.level-panel').forEach(p=>p.classList.remove('active'));
-      wrap.querySelector('#lvlPanel-'+lv).classList.add('active');
+      wrap.querySelector(`#lvlPanel-${lv}`).classList.add('active');
     });
   });
 }
-document.getElementById('skillTabs')&&document.getElementById('skillTabs').addEventListener('click',e=>{
+
+document.getElementById('skillTabs')?.addEventListener('click',e=>{
   const btn=e.target.closest('.skill-tab');
   if(!btn)return;
   document.querySelectorAll('.skill-tab').forEach(b=>b.classList.remove('active'));
@@ -927,12 +1053,12 @@ document.getElementById('skillTabs')&&document.getElementById('skillTabs').addEv
 });
 buildSkillContent('timing');
 
-/* GALLERY */
+/* ─── GALLERY ────────────────────────────────────────────── */
 const STUDENTS=[
-  {name:'Cole M.',level:'intermediate',detail:'Playing 6+ months',emoji:'\uD83C\uDFB8',bg:'#1A2A20',quote:'Loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way I enjoyed it.'},
-  {name:'Neil M.',level:'beginner',detail:'Playing 3 months',emoji:'\uD83C\uDFB5',bg:'#201A1A',quote:'Real people, real results.'},
-  {name:'Tyrone J.',level:'intermediate',detail:'Playing 4 months',emoji:'\u26A1',bg:'#1A1A2A',quote:'Great program!'},
-  {name:'Anonymous',level:'beginner',detail:'Recent student',emoji:'\uD83C\uDF1F',bg:'#1A2020',quote:'Great quality for being so cheap!'},
+  {name:'Cole M.',level:'intermediate',detail:'Playing 6+ months',emoji:'🎸',bg:'#1A2A20',quote:'Loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way I enjoyed it.'},
+  {name:'Neil M.',level:'beginner',detail:'Playing 3 months',emoji:'🎵',bg:'#201A1A',quote:'Real people, real results.'},
+  {name:'Tyrone J.',level:'intermediate',detail:'Playing 4 months',emoji:'⚡',bg:'#1A1A2A',quote:'Great program!'},
+  {name:'Anonymous',level:'beginner',detail:'Recent student',emoji:'🌟',bg:'#1A2020',quote:'Great quality for being so cheap!'},
 ];
 function buildGallery(filter){
   const grid=document.getElementById('galleryGrid');
@@ -945,7 +1071,8 @@ function buildGallery(filter){
         <div class="student-detail">${s.detail}</div>
         <div class="student-quote">${s.quote}</div>
       </div>
-    </div>`).join('');
+    </div>
+  `).join('');
 }
 buildGallery('all');
 document.querySelectorAll('[data-gfilter]').forEach(btn=>{
@@ -956,7 +1083,7 @@ document.querySelectorAll('[data-gfilter]').forEach(btn=>{
   });
 });
 
-/* FAQ */
+/* ─── FAQ ────────────────────────────────────────────────── */
 document.querySelectorAll('.faq-q').forEach(q=>{
   q.addEventListener('click',()=>{
     const item=q.closest('.faq-item');
@@ -966,7 +1093,7 @@ document.querySelectorAll('.faq-q').forEach(q=>{
   });
 });
 
-/* CONTACT FORM */
+/* ─── CONTACT FORM ───────────────────────────────────────── */
 function submitContact(){
   const fname=document.getElementById('fname').value.trim();
   const lname=document.getElementById('lname').value.trim();
@@ -975,24 +1102,28 @@ function submitContact(){
   const message=document.getElementById('fmessage').value.trim();
   if(!fname||!email||!message){alert('Please fill in your name, email, and message.');return;}
   if(!email.includes('@')){alert('Please enter a valid email address.');return;}
+
   const formData=new FormData();
-  formData.append('name',fname+' '+lname);
-  formData.append('email',email);
-  formData.append('_subject','[Fretboard Academy] '+(topic||'Message from website'));
-  formData.append('message','Topic: '+(topic||'Not specified')+'\n\n'+message);
-  formData.append('_captcha','false');
-  formData.append('_template','table');
-  fetch('https://formsubmit.co/fretboardacademyreal@gmail.com',{method:'POST',body:formData})
-    .then(()=>{
-      document.getElementById('contactFormWrap').style.display='none';
-      document.getElementById('formSuccess').style.display='block';
-    }).catch(()=>{
-      const subject=encodeURIComponent('[Fretboard Academy] '+(topic||'Message from website'));
-      const body=encodeURIComponent('Name: '+fname+' '+lname+'\nEmail: '+email+'\nTopic: '+(topic||'Not specified')+'\n\n'+message);
-      window.open('mailto:fretboardacademyreal@gmail.com?subject='+subject+'&body='+body);
-      document.getElementById('contactFormWrap').style.display='none';
-      document.getElementById('formSuccess').style.display='block';
-    });
+  formData.append('name', fname+' '+lname);
+  formData.append('email', email);
+  formData.append('_subject', '[Fretboard Academy] '+(topic||'Message from website'));
+  formData.append('message', 'Topic: '+(topic||'Not specified')+'\n\n'+message);
+  formData.append('_captcha', 'false');
+  formData.append('_template', 'table');
+
+  fetch('https://formsubmit.co/fretboardacademyreal@gmail.com',{
+    method:'POST',
+    body:formData
+  }).then(()=>{
+    document.getElementById('contactFormWrap').style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+  }).catch(()=>{
+    const subject=encodeURIComponent('[Fretboard Academy] '+(topic||'Message from website'));
+    const body=encodeURIComponent('Name: '+fname+' '+lname+'\nEmail: '+email+'\nTopic: '+(topic||'Not specified')+'\n\n'+message);
+    window.open('mailto:fretboardacademyreal@gmail.com?subject='+subject+'&body='+body);
+    document.getElementById('contactFormWrap').style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+  });
 }
 </script>
 </body>
