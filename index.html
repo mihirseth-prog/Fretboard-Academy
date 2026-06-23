@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<!-- Supabase -->
 <style>
 :root{
   --navy:#0D1117;--dark2:#161C27;--dark3:#1E2535;
@@ -19,8 +20,6 @@ html{scroll-behavior:smooth;}
 body{background:var(--navy);color:var(--white);font-family:var(--font-b);font-size:16px;line-height:1.6;overflow-x:hidden;}
 a{color:inherit;text-decoration:none;}
 button{font-family:var(--font-b);cursor:pointer;}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2.5rem;background:rgba(13,17,23,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(245,166,35,0.12);}
 .nav-logo{font-family:var(--font-d);font-size:1.35rem;color:var(--amber);}
 .nav-links{display:flex;gap:0;list-style:none;}
@@ -35,13 +34,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .mobile-menu a{display:block;padding:0.75rem 0;color:var(--muted);font-size:0.9rem;font-weight:500;text-transform:uppercase;letter-spacing:0.05em;border-bottom:1px solid rgba(255,255,255,0.06);transition:color 0.2s;}
 .mobile-menu a.active{color:var(--amber);}
 .mobile-menu a:last-child{border-bottom:none;}
-
-/* PAGES */
 .page{display:none;min-height:100vh;padding-top:64px;animation:fadeIn 0.3s ease;}
 .page.active{display:block;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-
-/* SHARED */
 .wrap{max-width:1180px;margin:0 auto;padding:0 2.5rem;}
 .section{padding:5rem 0;}
 .eyebrow{font-family:var(--font-m);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);margin-bottom:0.875rem;}
@@ -53,28 +48,20 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .btn-s{display:inline-block;background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.22);padding:0.85rem 2rem;border-radius:4px;font-size:0.9375rem;font-weight:500;transition:border-color 0.2s,color 0.2s;cursor:pointer;}
 .btn-s:hover{border-color:var(--amber);color:var(--amber);}
 .divider{border:none;border-top:1px solid rgba(255,255,255,0.07);margin:0;}
-
-/* HOME HERO */
 .hero{min-height:calc(100vh - 64px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;padding:4rem 2.5rem;max-width:1180px;margin:0 auto;}
 .hero-text h1 em{color:var(--amber);font-style:normal;}
 .hero-text p{margin-bottom:2.25rem;}
 .hero-btns{display:flex;gap:0.875rem;flex-wrap:wrap;}
-
-/* CHORD DIAGRAM */
 .chord-demo{display:flex;flex-direction:column;align-items:center;gap:1.25rem;}
 .chord-label{font-family:var(--font-m);font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);}
 .chord-name-big{font-family:var(--font-d);font-size:3.5rem;color:var(--amber);min-height:3.75rem;line-height:1;}
 .chord-btns{display:flex;gap:0.4rem;flex-wrap:wrap;justify-content:center;}
 .chord-btn{font-family:var(--font-m);font-size:0.8rem;font-weight:600;padding:0.3rem 0.85rem;border-radius:3px;border:1px solid rgba(245,166,35,0.28);background:transparent;color:var(--muted);transition:all 0.15s;}
 .chord-btn:hover,.chord-btn.active{background:rgba(245,166,35,0.14);border-color:var(--amber);color:var(--amber);}
-
-/* STATS */
 .stats-bar{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);}
 .stats-inner{max-width:1180px;margin:0 auto;padding:2.25rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);text-align:center;gap:1rem;}
 .stat-val{font-family:var(--font-d);font-size:2.25rem;color:var(--amber);line-height:1;}
 .stat-lbl{font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.35rem;}
-
-/* LESSON CARDS (home) */
 .lessons-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem;margin-top:2.75rem;}
 .lesson-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:1.65rem;transition:border-color 0.2s,transform 0.2s;cursor:pointer;}
 .lesson-card:hover{border-color:rgba(245,166,35,0.38);transform:translateY(-3px);}
@@ -84,8 +71,6 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .lvl-a{background:rgba(232,112,112,0.18);color:var(--red);}
 .lesson-card h3{font-size:1rem;font-weight:600;margin-bottom:0.5rem;line-height:1.3;}
 .lesson-card p{font-size:0.855rem;color:var(--muted);line-height:1.58;}
-
-/* TESTIMONIALS */
 .testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin-top:2.75rem;}
 .testi{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:1.75rem;}
 .stars{color:var(--amber);font-size:0.78rem;margin-bottom:0.75rem;}
@@ -94,16 +79,16 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .avatar{width:38px;height:38px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:var(--navy);background:linear-gradient(135deg,var(--sage),var(--amber));}
 .author-name{font-size:0.85rem;font-weight:600;}
 .author-detail{font-size:0.75rem;color:var(--muted);}
-
-/* REVIEW SUBMISSION */
+.reviews-loading{color:var(--muted);font-size:0.9rem;padding:1.5rem 0;}
+/* review form */
 .review-form-wrap{background:var(--dark2);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:2.25rem;margin-top:3rem;}
 .review-form-wrap h3{font-size:1.1rem;font-weight:700;margin-bottom:0.4rem;}
 .review-form-wrap .sub{font-size:0.875rem;color:var(--muted);margin-bottom:1.75rem;}
 .review-form-inner{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
 .fg{display:flex;flex-direction:column;gap:0.4rem;}
 .fg label{font-size:0.8rem;font-weight:500;color:var(--muted);}
-.fg input,.fg textarea,.fg select{background:var(--navy);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:0.7rem 1rem;color:var(--white);font-family:var(--font-b);font-size:0.9rem;transition:border-color 0.2s;outline:none;width:100%;}
-.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--amber);}
+.fg input,.fg textarea{background:var(--navy);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:0.7rem 1rem;color:var(--white);font-family:var(--font-b);font-size:0.9rem;transition:border-color 0.2s;outline:none;width:100%;}
+.fg input:focus,.fg textarea:focus{border-color:var(--amber);}
 .fg textarea{min-height:100px;resize:vertical;}
 .fg.full{grid-column:1/-1;}
 .star-select{display:flex;gap:0.4rem;margin-top:0.25rem;}
@@ -112,23 +97,27 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .review-submitted{display:none;text-align:center;padding:2rem;}
 .review-submitted .check{font-size:2.5rem;margin-bottom:0.75rem;}
 .review-submitted p{color:var(--muted);font-size:0.9rem;}
-
-/* CTA */
+.reviews-loading{text-align:center;padding:2rem;color:var(--muted);font-size:0.9rem;}
+/* cta */
 .cta-strip{background:linear-gradient(135deg,rgba(245,166,35,0.1) 0%,rgba(74,124,89,0.07) 100%);border-top:1px solid rgba(245,166,35,0.18);border-bottom:1px solid rgba(245,166,35,0.1);text-align:center;padding:5rem 2.5rem;}
 .cta-strip p{color:var(--muted);font-size:1.05rem;max-width:460px;margin:0.75rem auto 2rem;line-height:1.7;}
-
-/* PAGE HEADER */
 .page-header{padding:4rem 2.5rem 2.5rem;max-width:1180px;margin:0 auto;}
-
-/* SKILLS PAGE */
-.skills-intro{max-width:680px;}
+/* skills */
 .skill-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin:2rem 0;}
 .skill-tab{font-family:var(--font-m);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.5rem 1.1rem;border-radius:100px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:var(--muted);transition:all 0.15s;}
 .skill-tab:hover,.skill-tab.active{border-color:var(--amber);color:var(--amber);background:rgba(245,166,35,0.08);}
-.skill-panel{display:none;}
-.skill-panel.active{display:block;}
 .skill-intro-box{background:var(--dark2);border-left:3px solid var(--amber);border-radius:0 8px 8px 0;padding:1.25rem 1.5rem;margin-bottom:2.5rem;}
 .skill-intro-box p{font-size:0.9rem;color:var(--muted);line-height:1.68;}
+/* curriculum overview grid */
+.curriculum-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-bottom:3rem;}
+.curriculum-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:1.5rem;cursor:pointer;transition:border-color 0.2s,transform 0.2s;}
+.curriculum-card:hover{border-color:rgba(245,166,35,0.4);transform:translateY(-3px);}
+.curriculum-card.active{border-color:var(--amber);background:rgba(245,166,35,0.06);}
+.curriculum-num{font-family:var(--font-m);font-size:0.7rem;color:var(--amber);letter-spacing:0.1em;margin-bottom:0.5rem;}
+.curriculum-card h3{font-size:0.975rem;font-weight:600;margin-bottom:0.5rem;}
+.curriculum-card p{font-size:0.8rem;color:var(--muted);line-height:1.55;}
+.curriculum-count{display:flex;gap:0.4rem;margin-top:0.75rem;}
+.curriculum-count span{font-family:var(--font-m);font-size:0.65rem;color:var(--muted);background:rgba(255,255,255,0.06);padding:0.2rem 0.5rem;border-radius:3px;}
 .level-tabs{display:flex;gap:0.4rem;margin-bottom:2rem;}
 .level-tab{font-family:var(--font-m);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:var(--muted);transition:all 0.15s;}
 .level-tab.active.beg{border-color:var(--green);color:var(--green);background:rgba(125,201,138,0.08);}
@@ -142,8 +131,7 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .skill-num{font-family:var(--font-d);font-size:1.5rem;color:rgba(245,166,35,0.3);min-width:2rem;line-height:1;padding-top:0.1rem;}
 .skill-item h4{font-size:0.975rem;font-weight:600;margin-bottom:0.3rem;}
 .skill-item p{font-size:0.855rem;color:var(--muted);line-height:1.6;}
-
-/* GALLERY */
+/* gallery */
 .filter-bar{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.5rem;}
 .filter-btn{font-family:var(--font-m);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:var(--muted);transition:all 0.15s;}
 .filter-btn:hover,.filter-btn.active{border-color:var(--amber);color:var(--amber);background:rgba(245,166,35,0.1);}
@@ -156,8 +144,7 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .student-name{font-size:0.95rem;font-weight:600;margin-bottom:0.2rem;}
 .student-detail{font-size:0.8rem;color:var(--muted);}
 .student-quote{font-size:0.845rem;color:var(--muted);font-style:italic;margin-top:0.625rem;line-height:1.55;border-left:2px solid var(--amber);padding-left:0.75rem;}
-
-/* ABOUT */
+/* about */
 .about-hero{padding:4rem 2.5rem 3rem;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;}
 .about-visual{background:var(--dark2);border-radius:12px;border:1px solid rgba(255,255,255,0.07);padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;}
 .about-quote{font-family:var(--font-d);font-size:1.5rem;color:var(--white);line-height:1.25;}
@@ -175,8 +162,7 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .team-name{font-size:1rem;font-weight:600;margin-bottom:0.25rem;}
 .team-role{font-family:var(--font-m);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);margin-bottom:0.625rem;}
 .team-bio{font-size:0.84rem;color:var(--muted);line-height:1.6;}
-
-/* CONTACT */
+/* contact */
 .contact-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;padding:3rem 2.5rem 5rem;}
 .contact-block{margin-bottom:1.75rem;}
 .contact-block h3{font-size:1rem;font-weight:600;margin-bottom:0.35rem;}
@@ -208,8 +194,7 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .form-success .check{font-size:3rem;margin-bottom:1rem;}
 .form-success h4{font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;}
 .form-success p{font-size:0.9rem;color:var(--muted);}
-
-/* START / PRICING */
+/* pricing */
 .start-hero{max-width:680px;margin:0 auto;padding:4rem 2.5rem 2rem;text-align:center;}
 .start-hero h1{margin-bottom:1rem;}
 .start-hero p{color:var(--muted);font-size:1.05rem;line-height:1.7;margin-bottom:2.5rem;}
@@ -233,8 +218,10 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .guarantee-icon{font-size:2rem;flex-shrink:0;}
 .guarantee-inner h4{font-size:0.975rem;font-weight:700;margin-bottom:0.35rem;color:var(--green);}
 .guarantee-inner p{font-size:0.875rem;color:var(--muted);line-height:1.65;}
-
-/* FOOTER */
+/* setup banner */
+.setup-banner{background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.3);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:2rem;font-size:0.875rem;line-height:1.6;color:var(--muted);display:none;}
+.setup-banner strong{color:var(--amber);}
+.setup-banner code{background:rgba(0,0,0,0.3);padding:0.1rem 0.4rem;border-radius:3px;font-family:var(--font-m);font-size:0.8rem;color:var(--white);}
 footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);padding:2.75rem 2.5rem;}
 .footer-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.25rem;}
 .footer-logo{font-family:var(--font-d);font-size:1.2rem;color:var(--amber);}
@@ -242,32 +229,13 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
 .footer-links a{color:var(--muted);font-size:0.85rem;transition:color 0.2s;}
 .footer-links a:hover{color:var(--white);}
 .footer-copy{color:var(--muted);font-size:0.8rem;}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero,.about-hero,.contact-grid{grid-template-columns:1fr;}
-  .stats-inner{grid-template-columns:repeat(2,1fr);}
-  .form-row{grid-template-columns:1fr;}
-  .review-form-inner{grid-template-columns:1fr;}
-}
-@media(max-width:640px){
-  nav{padding:1rem 1.25rem;}
-  .nav-links{display:none;}
-  .hamburger{display:flex;}
-  .hero,.about-hero{padding:3rem 1.25rem 2rem;}
-  .wrap,.page-header{padding-left:1.25rem;padding-right:1.25rem;}
-  .section{padding:3.5rem 0;}
-  .contact-grid,.plan-grid,.guarantee-box{padding-left:1.25rem;padding-right:1.25rem;}
-  footer{padding:2rem 1.25rem;}
-  .stats-inner{padding:1.75rem 1.25rem;}
-  .cta-strip{padding:3.5rem 1.25rem;}
-}
+@media(max-width:900px){.hero,.about-hero,.contact-grid{grid-template-columns:1fr;}.stats-inner{grid-template-columns:repeat(2,1fr);}.form-row{grid-template-columns:1fr;}.review-form-inner{grid-template-columns:1fr;}}
+@media(max-width:640px){nav{padding:1rem 1.25rem;}.nav-links{display:none;}.hamburger{display:flex;}.hero,.about-hero{padding:3rem 1.25rem 2rem;}.wrap,.page-header{padding-left:1.25rem;padding-right:1.25rem;}.section{padding:3.5rem 0;}.contact-grid,.plan-grid,.guarantee-box{padding-left:1.25rem;padding-right:1.25rem;}footer{padding:2rem 1.25rem;}.stats-inner{padding:1.75rem 1.25rem;}.cta-strip{padding:3.5rem 1.25rem;}}
 @media(prefers-reduced-motion:reduce){*{transition-duration:0.01ms!important;animation-duration:0.01ms!important;}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#" onclick="showPage('home');return false;">Fretboard Academy</a>
   <ul class="nav-links">
@@ -278,9 +246,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
     <li><a href="#" data-page="contact">Contact</a></li>
     <li><a href="#" data-page="start" class="nav-cta">Start Now</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#" data-page="home">Home</a>
@@ -291,7 +257,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <a href="#" data-page="start">Start Now →</a>
 </div>
 
-<!-- ═══════════ HOME ═══════════ -->
+<!-- HOME -->
 <div class="page active" id="page-home">
   <div class="hero">
     <div class="hero-text">
@@ -351,25 +317,26 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   </div>
 
   <div class="wrap section">
-    <p class="eyebrow">Featured skills</p>
-    <h2 class="display">Start here</h2>
+    <p class="eyebrow">The curriculum</p>
+    <h2 class="display">5 skills. 75 lessons. One clear path.</h2>
     <div class="lessons-grid">
       <div class="lesson-card" onclick="showPage('skills')">
-        <span class="lvl lvl-b">Beginner</span>
-        <h3>Timing & Rhythm Fundamentals</h3>
-        <p>Learn to count beats, stay in time with a metronome, and develop the groove that makes everything sound musical.</p>
+        <span class="lvl lvl-b">Skill 1</span>
+        <h3>Timing & Rhythm</h3>
+        <p>Count beats, stay in time with a metronome, and develop the groove that makes everything sound musical.</p>
       </div>
       <div class="lesson-card" onclick="showPage('skills')">
-        <span class="lvl lvl-i">Intermediate</span>
-        <h3>Smooth Chord Transitions</h3>
+        <span class="lvl lvl-i">Skill 2</span>
+        <h3>Chord Transitions</h3>
         <p>Break through the barrier of choppy chord changes with targeted drills and pivot-finger technique.</p>
       </div>
       <div class="lesson-card" onclick="showPage('skills')">
-        <span class="lvl lvl-a">Advanced</span>
+        <span class="lvl lvl-a">Skill 3</span>
         <h3>Fretboard Navigation</h3>
         <p>Learn every note on the neck and connect scale shapes across positions to solo freely anywhere.</p>
       </div>
     </div>
+    <p style="margin-top:1.75rem;"><a href="#" onclick="showPage('skills');return false;" style="color:var(--amber);font-size:0.9rem;font-weight:600;">See the full curriculum →</a></p>
   </div>
 
   <hr class="divider"/>
@@ -377,15 +344,20 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <div class="wrap section">
     <p class="eyebrow">From students</p>
     <h2 class="display">Real people, real results</h2>
-    <div class="testi-grid" id="homeTesti"></div>
 
-    <!-- Add a review -->
+    <!-- Setup banner shown only when Supabase not configured -->
+    <div class="setup-banner" id="setupBanner">
+      <strong>⚙️ For Mihir & Ranvir:</strong> Reviews are currently showing from a default list. To make reviews save across all devices, follow the setup guide in the README, add your Supabase URL and key to the top of the &lt;script&gt;, then re-upload. Until then, reviews still work — they just won't persist across sessions.
+    </div>
+
+    <div id="homeTesti"><div class="reviews-loading">Loading reviews…</div></div>
+
     <div class="review-form-wrap">
       <h3>Leave a review</h3>
       <p class="sub">Tried Fretboard Academy? We'd love to hear what you think.</p>
       <div id="reviewFormInner">
         <div class="review-form-inner">
-          <div class="fg"><label>Your name</label><input type="text" id="rname" placeholder="Cole Mason"/></div>
+          <div class="fg"><label>Your name</label><input type="text" id="rname" placeholder="Cole M."/></div>
           <div class="fg"><label>How long have you been playing?</label><input type="text" id="rmonths" placeholder="e.g. 6 months"/></div>
           <div class="fg full"><label>Your review</label><textarea id="rtext" placeholder="Tell us about your experience…"></textarea></div>
           <div class="fg full">
@@ -411,29 +383,38 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <div class="cta-strip">
     <p class="eyebrow">Ready when you are</p>
     <h2 class="display">Pick up your guitar.<br>Let's start today.</h2>
-    <p>Your first lesson is completely free. Not happy after your second lesson? Full money-back guarantee.</p>
+    <p>Your first lesson is completely free. Not happy after 3 lessons? Full money-back guarantee.</p>
     <a href="#" class="btn-p" onclick="showPage('start');return false;">Start Your First Lesson</a>
   </div>
 </div>
 
-<!-- ═══════════ SKILLS ═══════════ -->
+<!-- SKILLS -->
 <div class="page" id="page-skills">
   <div class="page-header wrap">
-    <p class="eyebrow">Fundamental Guitar Skills</p>
-    <h1 class="display">Master the foundations</h1>
-    <p class="lead skills-intro">Five core skills underpin everything in guitar. Select a skill, then choose your level to see exactly what you'll learn.</p>
-    <div class="skill-tabs" id="skillTabs">
-      <button class="skill-tab active" data-skill="timing">Timing & Rhythm</button>
-      <button class="skill-tab" data-skill="transitions">Chord Transitions</button>
-      <button class="skill-tab" data-skill="fretboard">Fretboard Navigation</button>
-      <button class="skill-tab" data-skill="posture">Physical Posture</button>
-      <button class="skill-tab" data-skill="tone">Tonal Control</button>
-    </div>
+    <p class="eyebrow">The Curriculum</p>
+    <h1 class="display">What we teach</h1>
+    <p class="lead">Every student learns the same five core skills, each broken into Beginner, Intermediate, and Advanced — 15 lessons per skill, 75 in total. This is the exact structure Mihir and Ranvir follow with every student.</p>
   </div>
-  <div class="wrap" style="padding-bottom:5rem;" id="skillContent"></div>
+
+  <div class="wrap" style="padding-bottom:1rem;">
+    <div class="curriculum-grid" id="curriculumGrid"></div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:5rem;">
+    <p class="eyebrow" style="margin-top:1rem;">Detailed breakdown</p>
+    <h2 class="display" style="font-size:1.6rem;margin-bottom:1.5rem;">Explore each skill</h2>
+    <div class="skill-tabs" id="skillTabs">
+      <button class="skill-tab active" data-skill="timing">1. Timing & Rhythm</button>
+      <button class="skill-tab" data-skill="transitions">2. Chord Transitions</button>
+      <button class="skill-tab" data-skill="fretboard">3. Fretboard Navigation</button>
+      <button class="skill-tab" data-skill="posture">4. Physical Posture</button>
+      <button class="skill-tab" data-skill="tone">5. Tonal Control</button>
+    </div>
+    <div id="skillContent"></div>
+  </div>
 </div>
 
-<!-- ═══════════ GALLERY ═══════════ -->
+<!-- GALLERY -->
 <div class="page" id="page-gallery">
   <div class="page-header wrap">
     <p class="eyebrow">Student community</p>
@@ -449,18 +430,18 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   <div class="wrap"><div class="gallery-grid" id="galleryGrid"></div></div>
 </div>
 
-<!-- ═══════════ ABOUT ═══════════ -->
+<!-- ABOUT -->
 <div class="page" id="page-about">
   <div class="about-hero">
     <div>
       <p class="eyebrow">The story</p>
       <h1 class="display">Teaching guitar is our life's work</h1>
-      <p class="lead" style="margin-bottom:1.5rem;">We both picked up the guitar at age 9 and never put it down. Fretboard Academy was built because we saw too many beginners quit — not because guitar is hard, but because the way it's taught usually is.</p>
-      <p style="color:var(--muted);font-size:0.9rem;line-height:1.7;">Every lesson here is designed around one question: what does someone actually need to know right now to sound better? Not what's traditionally taught first. What works. Based in Long Grove, Illinois, we've only taught a handful of students so far, but we're committed to helping as many people as possible learn guitar.</p>
+      <p class="lead" style="margin-bottom:1.5rem;">We're both 16, and we've been playing guitar since age 9. Fretboard Academy was built because we saw too many beginners quit — not because guitar is hard, but because the way it's taught usually is.</p>
+      <p style="color:var(--muted);font-size:0.9rem;line-height:1.7;">Every lesson here is designed around one question: what does someone actually need to know right now to sound better? Not what's traditionally taught first. What works. Based in Long Grove, Illinois, we've only taught a handful of students so far, but we're committed to helping as many people as possible learn guitar — and we bring a fresh, modern perspective to teaching that older instructors sometimes miss.</p>
     </div>
     <div class="about-visual">
       <div class="about-quote">Teaching isn't about knowing more.<br>It's about <em>explaining better.</em></div>
-      <p class="about-bio">Two lifelong guitarists, playing since age 9, with one simple belief: anyone can learn to play if they're shown the right path in the right order.</p>
+      <p class="about-bio">Two 16-year-old guitarists, playing since age 9, with one simple belief: anyone can learn to play if they're shown the right path in the right order.</p>
       <div class="about-sig">— Mihir &amp; Ranvir</div>
     </div>
   </div>
@@ -483,46 +464,38 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
       <div class="team-card">
         <div class="team-avatar" style="background:linear-gradient(135deg,#4A7C59,#F5A623);">MS</div>
         <div class="team-name">Mihir Seth</div>
-        <div class="team-role">Lead Instructor</div>
+        <div class="team-role">Lead Instructor, Age 16</div>
         <p class="team-bio">Playing guitar since age 9 and trained by world-class mentors, Mihir specializes in acoustic, theory, and beginner-to-advanced progressions. His structured approach gets students playing real songs fast.</p>
       </div>
       <div class="team-card">
         <div class="team-avatar" style="background:linear-gradient(135deg,#3A5F8A,#7DC98A);">RT</div>
         <div class="team-name">Ranvir Tanwar</div>
-        <div class="team-role">Lead Instructor</div>
+        <div class="team-role">Lead Instructor, Age 16</div>
         <p class="team-bio">Picking up the guitar at age 9 and coached by the best in the industry, Ranvir brings deep expertise in electric guitar, rhythm, and music theory. Known for making complex concepts feel effortless.</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════ CONTACT ═══════════ -->
+<!-- CONTACT -->
 <div class="page" id="page-contact">
   <div class="page-header wrap">
     <p class="eyebrow">Get in touch</p>
     <h1 class="display">We're here to help</h1>
-    <p class="lead">Whether you have a question, a lesson request, or just want to say hello — we respond to every message within 24 hours.</p>
+    <p class="lead">Whether you have a question, a lesson request, or just want to enroll — we respond to every message within 24 hours.</p>
   </div>
   <div class="contact-grid">
     <div>
       <div class="contact-block"><h3>📧 Email us</h3><p><a href="mailto:fretboardacademyreal@gmail.com">fretboardacademyreal@gmail.com</a></p></div>
-      <div class="contact-block"><h3>📍 Based in</h3><p>Long Grove, Illinois</p></div>
-      <div class="contact-block"><h3>⏱ Response time</h3><p>We reply to every message within 24 hours on weekdays. Pro members get priority support.</p></div>
-      <div class="contact-block"><h3>🌐 Follow along</h3>
-        <div class="social-links">
-          <a href="https://www.youtube.com/@FretBoardAcademy-c4u" class="social-link" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="https://www.instagram.com/fretboardacademyreal/" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://www.tiktok.com/@fretboardacademy" class="social-link" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://x.com/fretboardreal" class="social-link" target="_blank" rel="noopener noreferrer">X</a>
-          <a href="https://www.facebook.com/profile.php?id=61590577967956" class="social-link" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </div>
-      </div>
+      <div class="contact-block"><h3>📍 Based in</h3><p>Long Grove, Illinois — lessons taught online</p></div>
+      <div class="contact-block"><h3>⏱ Response time</h3><p>We reply to every message within 24 hours on weekdays.</p></div>
+      <div class="contact-block"><h3>🌐 Follow along</h3><div class="social-links"><a href="https://www.youtube.com/@FretBoardAcademy-c4u" target="_blank" rel="noopener" class="social-link">YouTube</a><a href="https://www.instagram.com/fretboardacademyreal/" target="_blank" rel="noopener" class="social-link">Instagram</a><a href="https://www.tiktok.com/@fretboardacademy" target="_blank" rel="noopener" class="social-link">TikTok</a><a href="https://x.com/fretboardreal" target="_blank" rel="noopener" class="social-link">X</a></div></div>
       <div class="faq">
         <h3>Common questions</h3>
-        <div class="faq-item"><div class="faq-q">Do I need to own a guitar to start? <span class="arrow">▼</span></div><div class="faq-a">No — for the first few lessons we have a guitar you can use. After that you'll need to get your own, and we're happy to help you pick the right one for your budget and style.</div></div>
+        <div class="faq-item"><div class="faq-q">Do I need to own a guitar to start? <span class="arrow">▼</span></div><div class="faq-a">You'll need a guitar to practice, but you can watch the first free lesson first to decide which type to buy.</div></div>
         <div class="faq-item"><div class="faq-q">What if I'm a complete beginner? <span class="arrow">▼</span></div><div class="faq-a">Perfect — that's who we design for first. Our beginner path assumes zero prior knowledge and gets you playing songs within the first week.</div></div>
-        <div class="faq-item"><div class="faq-q">Is there a money-back guarantee? <span class="arrow">▼</span></div><div class="faq-a">Yes. Your first lesson is free. If you take your second lesson and don't enjoy it, we'll refund you in full — no questions asked.</div></div>
-        <div class="faq-item"><div class="faq-q">Can I switch plans later? <span class="arrow">▼</span></div><div class="faq-a">Absolutely. Upgrade or downgrade any time. We'll prorate the difference if you're mid-cycle.</div></div>
+        <div class="faq-item"><div class="faq-q">Is there a money-back guarantee? <span class="arrow">▼</span></div><div class="faq-a">Yes. If you complete 3 lessons and don't enjoy it, we'll refund you in full — no questions asked.</div></div>
+        <div class="faq-item"><div class="faq-q">Can I switch plans later? <span class="arrow">▼</span></div><div class="faq-a">Absolutely. Upgrade or downgrade any time.</div></div>
         <div class="faq-item"><div class="faq-q">Do lessons work on mobile? <span class="arrow">▼</span></div><div class="faq-a">Yes — everything is fully responsive. Many students watch on their phone or tablet while their guitar is in their hands.</div></div>
       </div>
     </div>
@@ -535,7 +508,17 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
           <div class="form-group"><label>Last name</label><input type="text" id="lname" placeholder="Cole"/></div>
         </div>
         <div class="form-group"><label>Email address</label><input type="email" id="femail" placeholder="you@example.com"/></div>
-        <div class="form-group"><label>Topic</label><select id="ftopic"><option value="">Select a topic…</option><option>General question</option><option>Lesson request</option><option>Enroll / pricing</option><option>Technical support</option><option>Billing</option><option>Just saying hello 👋</option></select></div>
+        <div class="form-group"><label>Topic</label>
+          <select id="ftopic">
+            <option value="">Select a topic…</option>
+            <option>Enroll / pricing</option>
+            <option>General question</option>
+            <option>Lesson request</option>
+            <option>Technical support</option>
+            <option>Billing</option>
+            <option>Just saying hello 👋</option>
+          </select>
+        </div>
         <div class="form-group"><label>Message</label><textarea id="fmessage" placeholder="What's on your mind?"></textarea></div>
         <button class="btn-p" style="width:100%;" onclick="submitContact()">Send message</button>
       </div>
@@ -544,158 +527,60 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   </div>
 </div>
 
-<!-- ═══════════ START / PRICING ═══════════ -->
+<!-- START / PRICING -->
 <div class="page" id="page-start">
   <div class="start-hero">
     <p class="eyebrow">Your journey starts here</p>
     <h1 class="display">Choose your plan</h1>
-    <p>Your first lesson is free — no card needed. Not happy after your second lesson? We'll refund you in full.</p>
+    <p>Your first lesson is free — no card needed. Not happy after 3 lessons? We'll refund you in full.</p>
   </div>
-
   <div class="guarantee-box">
     <div class="guarantee-inner">
       <div class="guarantee-icon">🛡️</div>
       <div>
-        <h4>First lesson free. Second lesson money-back guarantee.</h4>
-        <p>Your first lesson is completely free — no card needed. After your second lesson, if you're not happy with the experience, email us and we'll refund every cent — no questions asked, no hoops to jump through.</p>
+        <h4>Money-back guarantee</h4>
+        <p>Try 3 lessons. If you don't enjoy the experience, email us and we'll refund every cent — no questions asked, no hoops to jump through.</p>
       </div>
     </div>
   </div>
-
-  <!-- IN-PERSON PRICING -->
-  <div class="wrap" style="padding-bottom:1rem;">
-    <p class="eyebrow">In-Person Lessons</p>
-    <h2 class="display">Face-to-face in Long Grove, IL</h2>
-    <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;max-width:560px;margin-bottom:2.5rem;">Learn with Mihir or Ranvir in person. Nothing beats hands-on instruction — we'll correct your posture, technique, and tone in real time.</p>
-  </div>
-  <div class="plan-grid">
-    <div class="plan-card">
-      <div class="plan-name">Single Lesson</div>
-      <div class="plan-price">$25 <span>/ lesson</span></div>
-      <p class="plan-desc">Try a session before committing. Great for a specific skill you want to nail.</p>
-      <ul class="plan-features">
-        <li>1 in-person lesson</li>
-        <li>First lesson free</li>
-        <li>Direct instructor feedback</li>
-        <li class="no">Lesson history library</li>
-        <li class="no">Priority scheduling</li>
-      </ul>
-      <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
-    </div>
-
-    <div class="plan-card featured">
-      <div class="plan-badge">Best value</div>
-      <div class="plan-name">Monthly — 4 Lessons</div>
-      <div class="plan-price">$90 <span>/ month</span></div>
-      <p class="plan-desc">One lesson a week. The most consistent way to build real progress.</p>
-      <ul class="plan-features">
-        <li>4 in-person lessons per month</li>
-        <li>First lesson free</li>
-        <li>Direct instructor feedback</li>
-        <li>Lesson history library</li>
-        <li class="no">Priority scheduling</li>
-      </ul>
-      <button class="btn-p plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
-    </div>
-
-    <div class="plan-card">
-      <div class="plan-name">3-Month Pack</div>
-      <div class="plan-price">$260 <span>/ 3 mo.</span></div>
-      <p class="plan-desc">Commit to a quarter and save. Ideal for beginners ready to level up fast.</p>
-      <ul class="plan-features">
-        <li>~12 in-person lessons</li>
-        <li>First lesson free</li>
-        <li>Direct instructor feedback</li>
-        <li>Lesson history library</li>
-        <li class="no">Priority scheduling</li>
-      </ul>
-      <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
-    </div>
-
-    <div class="plan-card">
-      <div class="plan-name">6-Month Pack</div>
-      <div class="plan-price">$500 <span>/ 6 mo.</span></div>
-      <p class="plan-desc">The full in-person journey. Go from wherever you are to genuinely confident.</p>
-      <ul class="plan-features">
-        <li>~24 in-person lessons</li>
-        <li>First lesson free</li>
-        <li>Direct instructor feedback</li>
-        <li>Lesson history library</li>
-        <li>Priority scheduling</li>
-      </ul>
-      <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
-    </div>
-  </div>
-
-  <hr class="divider" style="margin:1rem 0 3rem;"/>
-
-  <!-- ONLINE PRICING -->
   <div class="wrap" style="padding-bottom:1rem;">
     <p class="eyebrow">Online Lessons</p>
     <h2 class="display">Learn from anywhere</h2>
-    <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;max-width:560px;margin-bottom:2.5rem;">Same instructors, same curriculum — streamed live to wherever you are. Perfect if you're outside the Long Grove area or prefer learning from home.</p>
+    <p style="color:var(--muted);font-size:0.95rem;line-height:1.7;max-width:560px;margin-bottom:2.5rem;">All lessons are taught live online by Mihir or Ranvir. No commute, no scheduling around a location — just pull up your guitar wherever you are.</p>
   </div>
   <div class="plan-grid" style="padding-bottom:5rem;">
     <div class="plan-card">
       <div class="plan-name">Single Lesson</div>
       <div class="plan-price">$20 <span>/ lesson</span></div>
       <p class="plan-desc">Drop in for one session. Perfect for trying things out or a focused skill.</p>
-      <ul class="plan-features">
-        <li>1 live online lesson</li>
-        <li>First lesson free</li>
-        <li>Direct instructor feedback</li>
-        <li class="no">Lesson history library</li>
-        <li class="no">Priority scheduling</li>
-      </ul>
+      <ul class="plan-features"><li>1 live online lesson</li><li>First lesson free</li><li>Direct instructor feedback</li><li class="no">Lesson history library</li><li class="no">Priority scheduling</li></ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
-
     <div class="plan-card featured">
       <div class="plan-badge">Best value</div>
       <div class="plan-name">Monthly — 4 Lessons</div>
       <div class="plan-price">$75 <span>/ month</span></div>
       <p class="plan-desc">One lesson a week, fully online. The most effective way to build progress.</p>
-      <ul class="plan-features">
-        <li>4 live online lessons per month</li>
-        <li>First lesson free</li>
-        <li>Direct instructor feedback</li>
-        <li>Lesson history library</li>
-        <li class="no">Priority scheduling</li>
-      </ul>
+      <ul class="plan-features"><li>4 live online lessons per month</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li class="no">Priority scheduling</li></ul>
       <button class="btn-p plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
-
     <div class="plan-card">
       <div class="plan-name">3-Month Pack</div>
-      <div class="plan-price">$225 <span>/ 3 mo.</span></div>
+      <div class="plan-price">$220 <span>/ 3 mo.</span></div>
       <p class="plan-desc">Commit to a quarter of online lessons and save. Great for dedicated learners.</p>
-      <ul class="plan-features">
-        <li>~12 live online lessons</li>
-        <li>First lesson free</li>
-        <li>Direct instructor feedback</li>
-        <li>Lesson history library</li>
-        <li class="no">Priority scheduling</li>
-      </ul>
+      <ul class="plan-features"><li>~12 live online lessons</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li class="no">Priority scheduling</li></ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
-
     <div class="plan-card">
       <div class="plan-name">6-Month Pack</div>
-      <div class="plan-price">$450 <span>/ 6 mo.</span></div>
+      <div class="plan-price">$470 <span>/ 6 mo.</span></div>
       <p class="plan-desc">The full online journey. Six months of structured lessons to transform your playing.</p>
-      <ul class="plan-features">
-        <li>~24 live online lessons</li>
-        <li>First lesson free</li>
-        <li>Direct instructor feedback</li>
-        <li>Lesson history library</li>
-        <li>Priority scheduling</li>
-      </ul>
+      <ul class="plan-features"><li>~24 live online lessons</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li>Priority scheduling</li></ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Fretboard Academy</div>
@@ -733,7 +618,6 @@ document.getElementById('hamburger').addEventListener('click',()=>{
 /* ─── CHORD DIAGRAM ──────────────────────────────────────── */
 const SX=[35,73,111,149,187,225];
 const FY={1:69,2:119,3:169,4:219};
-
 const CHORDS={
   G:{dots:[{s:0,f:2},{s:1,f:2},{s:5,f:3}],open:[2,3,4],muted:[]},
   C:{dots:[{s:1,f:3},{s:2,f:2},{s:4,f:1}],open:[3,5],muted:[0]},
@@ -742,7 +626,6 @@ const CHORDS={
   Am:{dots:[{s:2,f:2},{s:3,f:2},{s:4,f:1}],open:[1,5],muted:[0]},
   A:{dots:[{s:2,f:2},{s:3,f:2},{s:4,f:2}],open:[1,5],muted:[0]}
 };
-
 function renderChord(key){
   const chord=CHORDS[key];
   const g=document.getElementById('dots');
@@ -751,10 +634,9 @@ function renderChord(key){
   const ns='http://www.w3.org/2000/svg';
   chord.muted.forEach(s=>{
     const t=document.createElementNS(ns,'text');
-    t.setAttribute('x',SX[s]);t.setAttribute('y',30);
-    t.setAttribute('text-anchor','middle');t.setAttribute('font-size','15');
-    t.setAttribute('fill','#5A6F8A');t.setAttribute('font-family','Inter,sans-serif');
-    t.setAttribute('font-weight','700');t.textContent='×';
+    t.setAttribute('x',SX[s]);t.setAttribute('y',30);t.setAttribute('text-anchor','middle');
+    t.setAttribute('font-size','15');t.setAttribute('fill','#5A6F8A');
+    t.setAttribute('font-family','Inter,sans-serif');t.setAttribute('font-weight','700');t.textContent='×';
     g.appendChild(t);
   });
   chord.open.forEach(s=>{
@@ -775,7 +657,6 @@ function renderChord(key){
   const nameEl=document.getElementById('chordName');
   if(nameEl)nameEl.textContent=key;
 }
-
 document.getElementById('chordButtons')?.addEventListener('click',e=>{
   const btn=e.target.closest('.chord-btn');
   if(!btn)return;
@@ -785,84 +666,77 @@ document.getElementById('chordButtons')?.addEventListener('click',e=>{
 });
 renderChord('G');
 
-/* ─── REVIEWS — SHARED PERSISTENT STORAGE ───────────────── */
-// Uses a free Firebase Realtime Database (no account needed to read/write
-// from the browser). Reviews are stored at the URL below and are visible
-// to every visitor on every device in real time.
-
-const DB_URL = 'https://fretboard-academy-default-rtdb.firebaseio.com/reviews';
+/* ─── SUPABASE — CROSS-DEVICE REVIEWS ────────────────────────────── */
+/*
+  ONE-TIME SETUP (free, ~10 minutes):
+  1. Go to https://supabase.com → sign up free → New Project
+  2. In SQL Editor, run:
+       create table reviews (
+         id bigint generated always as identity primary key,
+         name text not null,
+         initials text,
+         detail text,
+         stars int not null default 5,
+         body text not null,
+         created_at timestamptz default now()
+       );
+       alter table reviews enable row level security;
+       create policy "read all" on reviews for select using (true);
+       create policy "insert all" on reviews for insert with check (true);
+  3. Project Settings → API → copy "Project URL" and "anon public" key
+  4. Paste them into the two variables below, save, and re-upload to Netlify
+*/
+const SUPA_URL   = 'YOUR_SUPABASE_URL';      // e.g. https://abcxyz.supabase.co
+const SUPA_KEY   = 'YOUR_SUPABASE_ANON_KEY'; // starts with eyJ...
+const SUPA_READY = SUPA_URL !== 'YOUR_SUPABASE_URL';
 
 const DEFAULT_REVIEWS=[
   {initials:'CM',name:'Cole M.',detail:'Playing for 6+ months',stars:5,
-   text:'I was at school of rock but I did not like the structure and when I found out about fretboard academy, I thought it was just another bad program. but when I signed up, I loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way that I enjoyed it.'},
-  {initials:'NM',name:'Neil M.',detail:'Playing for 3 months',stars:5,text:'Real people, real results.'},
-  {initials:'TJ',name:'Tyrone J.',detail:'Playing for 4 months',stars:5,text:'Great program!'},
-  {initials:'A',name:'Anonymous',detail:'Recent student',stars:5,text:'Great quality for being so cheap!'},
+   body:'I was at school of rock but I did not like the structure and when I found out about fretboard academy, I thought it was just another bad program. but when I signed up, I loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way that I enjoyed it.'},
+  {initials:'NM',name:'Neil M.',detail:'Playing for 3 months',stars:5,body:'Real people, real results.'},
+  {initials:'TJ',name:'Tyrone J.',detail:'Playing for 4 months',stars:5,body:'Great program!'},
+  {initials:'A', name:'Anonymous',detail:'Recent student',stars:5,body:'Great quality for being so cheap!'},
 ];
-
-let REVIEWS=[...DEFAULT_REVIEWS];
 
 function starsHTML(n){return '★'.repeat(n)+'☆'.repeat(5-n);}
 
-function buildTestimonials(){
+function renderReviews(list){
   const wrap=document.getElementById('homeTesti');
   if(!wrap)return;
-  wrap.innerHTML=REVIEWS.map(r=>`
+  if(!list||list.length===0){
+    wrap.innerHTML='<p style="color:var(--muted);padding:1rem 0;">No reviews yet — be the first!</p>';
+    return;
+  }
+  wrap.innerHTML=list.map(r=>`
     <div class="testi">
       <div class="stars">${starsHTML(r.stars)}</div>
-      <blockquote>"${r.text}"</blockquote>
+      <blockquote>"${r.body||r.text||''}"</blockquote>
       <div class="testi-author">
-        <div class="avatar">${r.initials}</div>
-        <div><div class="author-name">${r.name}</div><div class="author-detail">${r.detail}</div></div>
+        <div class="avatar">${r.initials||r.name.slice(0,2).toUpperCase()}</div>
+        <div><div class="author-name">${r.name}</div><div class="author-detail">${r.detail||'Recent student'}</div></div>
       </div>
     </div>
   `).join('');
 }
 
 async function loadReviews(){
+  if(!SUPA_READY){renderReviews(DEFAULT_REVIEWS);return;}
   try{
-    const res=await fetch(DB_URL+'.json');
-    if(res.ok){
-      const data=await res.json();
-      // Firebase stores arrays as objects with numeric keys, or null if empty
-      if(data && typeof data==='object' && !Array.isArray(data)){
-        const arr=Object.values(data);
-        if(arr.length>0){REVIEWS=arr;buildTestimonials();return;}
-      }
-      if(Array.isArray(data)&&data.length>0){
-        REVIEWS=data.filter(Boolean);
-        buildTestimonials();
-        return;
-      }
-    }
-    // Nothing stored yet — seed the defaults into the DB
-    await fetch(DB_URL+'.json',{
-      method:'PUT',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(DEFAULT_REVIEWS)
-    });
+    const res=await fetch(
+      SUPA_URL+'/rest/v1/reviews?select=*&order=stars.desc,created_at.desc',
+      {headers:{'apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY}}
+    );
+    if(!res.ok)throw new Error('fetch failed');
+    const data=await res.json();
+    renderReviews(data.length>0?data:DEFAULT_REVIEWS);
   }catch(e){
-    // Network unavailable — show defaults silently
-  }
-  buildTestimonials();
-}
-
-async function saveReviews(arr){
-  try{
-    await fetch(DB_URL+'.json',{
-      method:'PUT',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(arr)
-    });
-  }catch(e){
-    console.warn('Could not save reviews:',e);
+    console.warn('Supabase unavailable, showing defaults:',e);
+    renderReviews(DEFAULT_REVIEWS);
   }
 }
-
-// Load reviews on page init
 loadReviews();
 
-/* ─── REVIEW SUBMISSION ──────────────────────────────────── */
+/* ─── REVIEW SUBMISSION ─────────────────────────────────────────────── */
 let selectedStars=5;
 document.getElementById('starSelect')?.addEventListener('click',e=>{
   const btn=e.target.closest('[data-star]');
@@ -877,21 +751,48 @@ document.querySelectorAll('#starSelect button').forEach(b=>b.classList.add('lit'
 async function submitReview(){
   const name=document.getElementById('rname').value.trim();
   const months=document.getElementById('rmonths').value.trim();
-  const text=document.getElementById('rtext').value.trim();
-  if(!name||!text){alert('Please fill in your name and review.');return;}
-  const newReview={initials:name.slice(0,2).toUpperCase(),name,detail:months||'Recent student',stars:selectedStars,text};
-  REVIEWS.unshift(newReview);
-  REVIEWS.sort((a,b)=>b.stars-a.stars);
-  await saveReviews(REVIEWS);
-  buildTestimonials();
+  const body=document.getElementById('rtext').value.trim();
+  if(!name||!body){alert('Please fill in your name and review.');return;}
+  const review={
+    name,
+    initials:name.slice(0,2).toUpperCase(),
+    detail:months||'Recent student',
+    stars:selectedStars,
+    body
+  };
+  if(SUPA_READY){
+    try{
+      const res=await fetch(SUPA_URL+'/rest/v1/reviews',{
+        method:'POST',
+        headers:{
+          'apikey':SUPA_KEY,
+          'Authorization':'Bearer '+SUPA_KEY,
+          'Content-Type':'application/json',
+          'Prefer':'return=minimal'
+        },
+        body:JSON.stringify(review)
+      });
+      if(!res.ok)throw new Error('insert failed: '+res.status);
+      await loadReviews();
+    }catch(e){
+      console.error('Save error:',e);
+      alert('Could not save your review right now. Please try again later.');
+      return;
+    }
+  }else{
+    DEFAULT_REVIEWS.unshift(review);
+    DEFAULT_REVIEWS.sort((a,b)=>b.stars-a.stars);
+    renderReviews(DEFAULT_REVIEWS);
+  }
   document.getElementById('reviewFormInner').style.display='none';
   document.getElementById('reviewSubmitted').style.display='block';
 }
 
-/* ─── SKILLS DATA ────────────────────────────────────────── */
+/* \u2500\u2500\u2500 SKILLS DATA \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 const SKILLS={
   timing:{
     name:'Timing & Rhythm',
+    shortDesc:'Count, feel, and lock into a groove — the pulse behind every great player.',
     desc:'Rhythm is the heartbeat of music. Before notes, before chords — if your timing is off, nothing sounds right. This skill teaches you to feel and control time.',
     levels:{
       beginner:[
@@ -919,33 +820,35 @@ const SKILLS={
   },
   transitions:{
     name:'Chord Transitions',
+    shortDesc:'Switch between chords cleanly and fast — no more choppy, hesitant changes.',
     desc:'Clean, fast chord changes separate beginners from players who actually sound good. This skill is pure technique — finger efficiency, muscle memory, and pivot points.',
     levels:{
       beginner:[
-        {title:'The pivot finger technique',desc:'Keep one finger anchored between chords when possible to dramatically reduce movement and transition time.'},
-        {title:'G to C to D — the big three',desc:'The most common chord change sequence in pop and rock. Drill these three until they\'re automatic.'},
-        {title:'Looking ahead while playing',desc:'Train your brain to think one chord ahead so your fingers are already moving before you need them.'},
-        {title:'Slow-motion chord change drill',desc:'Move between chords at a snail\'s pace, placing all fingers simultaneously. Speed comes after accuracy.'},
-        {title:'One-minute changes exercise',desc:'Count how many times you can switch between two chords in 60 seconds. Track progress weekly.'},
+        {title:'The pivot finger technique',desc:"Keep one finger anchored between chords when possible to dramatically reduce movement and transition time."},
+        {title:'G to C to D — the big three',desc:"The most common chord change sequence in pop and rock. Drill these three until they're automatic."},
+        {title:'Looking ahead while playing',desc:"Train your brain to think one chord ahead so your fingers are already moving before you need them."},
+        {title:'Slow-motion chord change drill',desc:"Move between chords at a snail's pace, placing all fingers simultaneously. Speed comes after accuracy."},
+        {title:'One-minute changes exercise',desc:"Count how many times you can switch between two chords in 60 seconds. Track progress weekly."},
       ],
       intermediate:[
-        {title:'Barre chord transitions',desc:'Sliding a barre chord shape up and down the neck cleanly without buzzing or gaps in sound.'},
-        {title:'Transitions from open to barre chords',desc:'The hardest jump for intermediate players — from a relaxed open shape into a demanding barre.'},
-        {title:'Transitioning to sus and add chords',desc:'Add color with Dsus2, Cadd9, and similar shapes that connect smoothly to their parent chords.'},
-        {title:'Economy of motion analysis',desc:'Film your fretting hand and identify unnecessary movement — every millimeter saved speeds up your transitions.'},
-        {title:'Chord transitions under tempo pressure',desc:'Use a metronome that increases BPM every 4 bars, forcing you to adapt under increasing pressure.'},
+        {title:'Barre chord transitions',desc:"Sliding a barre chord shape up and down the neck cleanly without buzzing or gaps in sound."},
+        {title:'Transitions from open to barre chords',desc:"The hardest jump for intermediate players — from a relaxed open shape into a demanding barre."},
+        {title:'Transitioning to sus and add chords',desc:"Add color with Dsus2, Cadd9, and similar shapes that connect smoothly to their parent chords."},
+        {title:'Economy of motion analysis',desc:"Film your fretting hand and identify unnecessary movement — every millimeter saved speeds up your transitions."},
+        {title:'Chord transitions under tempo pressure',desc:"Use a metronome that increases BPM every 4 bars, forcing you to adapt under increasing pressure."},
       ],
       advanced:[
-        {title:'Jazz voicing transitions',desc:'Move between complex 7th, 9th, and 13th chord shapes with smooth voice leading — minimizing motion between notes.'},
-        {title:'Three-chord jazzy movement in multiple keys',desc:'Transpose the ii-V-I progression across all 12 keys and practice the transitions until they\'re fluid everywhere.'},
-        {title:'Simultaneous melody + chord transitions',desc:'Hold chord shapes while playing a moving melody line on top — the Travis picking and chord-melody technique.'},
-        {title:'Rapid-fire progression training',desc:'12-chord progressions at high tempo — the kind of changes you\'d face in a real gigging situation.'},
-        {title:'Connecting chords with chromatic passing tones',desc:'Use single notes between chord changes to create smooth, professional-sounding harmonic movement.'},
+        {title:'Jazz voicing transitions',desc:"Move between complex 7th, 9th, and 13th chord shapes with smooth voice leading — minimizing motion between notes."},
+        {title:'Three-chord jazzy movement in multiple keys',desc:"Transpose the ii-V-I progression across all 12 keys and practice the transitions until they're fluid everywhere."},
+        {title:'Simultaneous melody + chord transitions',desc:"Hold chord shapes while playing a moving melody line on top — the Travis picking and chord-melody technique."},
+        {title:'Rapid-fire progression training',desc:"12-chord progressions at high tempo — the kind of changes you'd face in a real gigging situation."},
+        {title:'Connecting chords with chromatic passing tones',desc:"Use single notes between chord changes to create smooth, professional-sounding harmonic movement."},
       ],
     }
   },
   fretboard:{
     name:'Fretboard Navigation',
+    shortDesc:'Know every note on the neck and move freely instead of being stuck in one spot.',
     desc:'Most players know a few shapes in one area of the neck. Fretboard navigation means knowing every note, connecting patterns, and playing freely anywhere.',
     levels:{
       beginner:[
@@ -973,6 +876,7 @@ const SKILLS={
   },
   posture:{
     name:'Physical Posture',
+    shortDesc:'Build the right habits early so you avoid pain and play with proper technique.',
     desc:'Bad posture causes pain, limits speed, and creates habits that take years to undo. Correct technique from day one makes everything else easier.',
     levels:{
       beginner:[
@@ -1000,13 +904,14 @@ const SKILLS={
   },
   tone:{
     name:'Tonal Control',
+    shortDesc:'Shape how every note actually sounds — the difference between notes and music.',
     desc:'Two guitarists playing the same chord can sound completely different. Tonal control is what separates "playing notes" from "making music."',
     levels:{
       beginner:[
         {title:'Pick pressure and attack angle',desc:'Harder pick attack = louder, brighter. Softer = quieter, warmer. This is your first dynamic tool.'},
         {title:'Fretting pressure and clean notes',desc:'Press just hard enough to sound the note cleanly — over-pressing causes sharp intonation and sore fingers.'},
         {title:'Fingertip vs flat pad fretting',desc:'Fingertips produce cleaner, brighter tone. Flat pads mute adjacent strings and muddy your sound.'},
-        {title:'Muting unwanted strings',desc:'Resting unused fingers gently on strings you don\'t want to ring prevents accidental buzzing and noise.'},
+        {title:'Muting unwanted strings',desc:"Resting unused fingers gently on strings you don't want to ring prevents accidental buzzing and noise."},
         {title:'Strumming near the bridge vs neck',desc:'Strumming near the bridge is brighter and twangier. Near the neck is warmer and fuller. Explore the spectrum.'},
       ],
       intermediate:[
@@ -1014,12 +919,12 @@ const SKILLS={
         {title:'Hammer-ons and pull-offs for legato tone',desc:'Playing notes without picking creates a smoother, more connected sound — called legato. Essential for melodic solos.'},
         {title:'Bending in tune',desc:'Bending a string raises pitch. The goal is bending exactly to the target pitch — usually a half or whole step.'},
         {title:'Controlling note sustain',desc:'How long a note rings depends on pick attack, fret pressure, and amp settings. Learn to shape sustain intentionally.'},
-        {title:'Using guitar volume and tone knobs',desc:'Rolling the guitar\'s own volume knob changes tone as well as volume — an overlooked expressive tool on any guitar.'},
+        {title:'Using guitar volume and tone knobs',desc:"Rolling the guitar's own volume knob changes tone as well as volume — an overlooked expressive tool on any guitar."},
       ],
       advanced:[
         {title:'Hybrid picking for tonal variety',desc:'Using pick + middle and ring fingers simultaneously to blend sharp pick attack with warm finger tone in one phrase.'},
         {title:'Natural harmonics and tone colors',desc:'Lightly touching the string at fret 5, 7, or 12 produces bell-like harmonic tones not possible any other way.'},
-        {title:'Amp EQ and how it shapes your tone',desc:'Bass, mid, and treble controls on your amp interact with your picking technique. Learn what each does to your sound.'},
+        {title:'Amp EQ and how it shapes your tone',desc:"Bass, mid, and treble controls on your amp interact with your picking technique. Learn what each does to your sound."},
         {title:'Pinch harmonics and artificial harmonics',desc:'Advanced techniques for adding high-pitched "squeal" tones — a staple of rock and country lead playing.'},
         {title:'Expressive dynamics across a full performance',desc:'The best players vary from near-silent to full-blast within a single song. Learn to plan and execute dynamic arcs.'},
       ],
@@ -1027,9 +932,44 @@ const SKILLS={
   }
 };
 
+function buildCurriculumOverview(){
+  const grid=document.getElementById('curriculumGrid');
+  if(!grid)return;
+  const keys=Object.keys(SKILLS);
+  grid.innerHTML=keys.map((key,i)=>{
+    const s=SKILLS[key];
+    return `
+      <div class="curriculum-card${i===0?' active':''}" data-skill-card="${key}">
+        <div class="curriculum-num">SKILL ${i+1} OF ${keys.length}</div>
+        <h3>${s.name}</h3>
+        <p>${s.shortDesc}</p>
+        <div class="curriculum-count">
+          <span>5 Beginner</span><span>5 Intermediate</span><span>5 Advanced</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  grid.querySelectorAll('[data-skill-card]').forEach(card=>{
+    card.addEventListener('click',()=>{
+      const key=card.dataset.skillCard;
+      document.querySelectorAll('.skill-tab').forEach(b=>b.classList.remove('active'));
+      document.querySelector(`.skill-tab[data-skill="${key}"]`)?.classList.add('active');
+      grid.querySelectorAll('.curriculum-card').forEach(c=>c.classList.remove('active'));
+      card.classList.add('active');
+      buildSkillContent(key);
+      document.getElementById('skillContent')?.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+}
+
 function buildSkillContent(skillKey){
   const skill=SKILLS[skillKey];
   const wrap=document.getElementById('skillContent');
+  // sync curriculum overview highlight
+  document.querySelectorAll('.curriculum-card').forEach(c=>{
+    c.classList.toggle('active',c.dataset.skillCard===skillKey);
+  });
   wrap.innerHTML=`
     <div class="skill-intro-box"><p>${skill.desc}</p></div>
     <div class="level-tabs">
@@ -1071,14 +1011,15 @@ document.getElementById('skillTabs')?.addEventListener('click',e=>{
   btn.classList.add('active');
   buildSkillContent(btn.dataset.skill);
 });
+buildCurriculumOverview();
 buildSkillContent('timing');
 
-/* ─── GALLERY ────────────────────────────────────────────── */
+/* \u2500\u2500\u2500 GALLERY \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 const STUDENTS=[
-  {name:'Cole M.',level:'intermediate',detail:'Playing 6+ months',emoji:'🎸',bg:'#1A2A20',quote:'Loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way I enjoyed it.'},
-  {name:'Neil M.',level:'beginner',detail:'Playing 3 months',emoji:'🎵',bg:'#201A1A',quote:'Real people, real results.'},
-  {name:'Tyrone J.',level:'intermediate',detail:'Playing 4 months',emoji:'⚡',bg:'#1A1A2A',quote:'Great program!'},
-  {name:'Anonymous',level:'beginner',detail:'Recent student',emoji:'🌟',bg:'#1A2020',quote:'Great quality for being so cheap!'},
+  {name:'Cole M.',level:'intermediate',detail:'Playing 6+ months',emoji:'\U0001f3b8',bg:'#1A2A20',quote:'Loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way I enjoyed it.'},
+  {name:'Neil M.',level:'beginner',detail:'Playing 3 months',emoji:'\U0001f3b5',bg:'#201A1A',quote:'Real people, real results.'},
+  {name:'Tyrone J.',level:'intermediate',detail:'Playing 4 months',emoji:'\u26a1',bg:'#1A1A2A',quote:'Great program!'},
+  {name:'Anonymous',level:'beginner',detail:'Recent student',emoji:'\U0001f31f',bg:'#1A2020',quote:'Great quality for being so cheap!'},
 ];
 function buildGallery(filter){
   const grid=document.getElementById('galleryGrid');
@@ -1103,7 +1044,7 @@ document.querySelectorAll('[data-gfilter]').forEach(btn=>{
   });
 });
 
-/* ─── FAQ ────────────────────────────────────────────────── */
+/* \u2500\u2500\u2500 FAQ \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 document.querySelectorAll('.faq-q').forEach(q=>{
   q.addEventListener('click',()=>{
     const item=q.closest('.faq-item');
@@ -1113,7 +1054,7 @@ document.querySelectorAll('.faq-q').forEach(q=>{
   });
 });
 
-/* ─── CONTACT FORM ───────────────────────────────────────── */
+/* \u2500\u2500\u2500 CONTACT FORM \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 function submitContact(){
   const fname=document.getElementById('fname').value.trim();
   const lname=document.getElementById('lname').value.trim();
