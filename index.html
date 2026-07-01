@@ -539,10 +539,10 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
   </div>
   <div class="contact-grid">
     <div>
-      <div class="contact-block"><h3>📧 Email us</h3><p><a href="mailto:fretboardacademyreal@gmail.com">fretboardacademyreal@gmail.com</a></p></div>
+      <div class="contact-block"><h3>📧 Email us</h3><p><a href="mailto:fretboardcontact@gmail.com">fretboardcontact@gmail.com</a></p></div>
       <div class="contact-block"><h3>📍 Based in</h3><p>Long Grove, Illinois — lessons taught online</p></div>
       <div class="contact-block"><h3>⏱ Response time</h3><p>We reply to every message within 24 hours on weekdays.</p></div>
-      <div class="contact-block"><h3>🌐 Follow along</h3><div class="social-links"><a href="https://www.youtube.com/@FretBoardAcademy-c4u" target="_blank" rel="noopener" class="social-link">YouTube</a><a href="https://www.instagram.com/fretboardacademyreal/" target="_blank" rel="noopener" class="social-link">Instagram</a><a href="https://www.tiktok.com/@fretboardacademy" target="_blank" rel="noopener" class="social-link">TikTok</a><a href="https://x.com/fretboardreal" target="_blank" rel="noopener" class="social-link">X</a></div></div>
+      <div class="contact-block"><h3>🌐 Follow along</h3><div class="social-links"><a href="#" class="social-link">YouTube</a><a href="#" class="social-link">Instagram</a><a href="#" class="social-link">TikTok</a><a href="#" class="social-link">X</a></div></div>
       <div class="faq">
         <h3>Common questions</h3>
         <div class="faq-item"><div class="faq-q">Do I need to own a guitar to start? <span class="arrow">▼</span></div><div class="faq-a">You'll need a guitar to practice, but you can watch the first free lesson first to decide which type to buy.</div></div>
@@ -619,14 +619,14 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
     </div>
     <div class="plan-card">
       <div class="plan-name">3-Month Pack</div>
-      <div class="plan-price">$220 <span>/ 3 mo.</span></div>
+      <div class="plan-price">$210 <span>/ 3 mo.</span></div>
       <p class="plan-desc">Commit to a quarter of online lessons and save. Great for dedicated learners.</p>
       <ul class="plan-features"><li>~12 live online lessons</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li class="no">Priority scheduling</li></ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
     </div>
     <div class="plan-card">
       <div class="plan-name">6-Month Pack</div>
-      <div class="plan-price">$470 <span>/ 6 mo.</span></div>
+      <div class="plan-price">$400 <span>/ 6 mo.</span></div>
       <p class="plan-desc">The full online journey. Six months of structured lessons to transform your playing.</p>
       <ul class="plan-features"><li>~24 live online lessons</li><li>First lesson free</li><li>Direct instructor feedback</li><li>Lesson history library</li><li>Priority scheduling</li></ul>
       <button class="btn-s plan-btn" onclick="showPage('contact')">Contact to Enroll</button>
@@ -1059,7 +1059,7 @@ function submitContact(){
   formData.append('_captcha', 'false');
   formData.append('_template', 'table');
 
-  fetch('https://formsubmit.co/fretboardacademyreal@gmail.com',{
+  fetch('https://formsubmit.co/fretboardcontact@gmail.com',{
     method:'POST',
     body:formData
   }).then(()=>{
@@ -1068,7 +1068,7 @@ function submitContact(){
   }).catch(()=>{
     const subject=encodeURIComponent('[Fretboard Academy] '+(topic||'Message from website'));
     const body=encodeURIComponent('Name: '+fname+' '+lname+'\nEmail: '+email+'\nTopic: '+(topic||'Not specified')+'\n\n'+message);
-    window.open('mailto:fretboardacademyreal@gmail.com?subject='+subject+'&body='+body);
+    window.open('mailto:fretboardcontact@gmail.com?subject='+subject+'&body='+body);
     document.getElementById('contactFormWrap').style.display='none';
     document.getElementById('formSuccess').style.display='block';
   });
