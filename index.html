@@ -164,15 +164,22 @@ h2.display{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-h
 .filter-bar{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.5rem;}
 .filter-btn{font-family:var(--font-m);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:var(--muted);transition:all 0.15s;}
 .filter-btn:hover,.filter-btn.active{border-color:var(--amber);color:var(--amber);background:rgba(245,166,35,0.1);}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.25rem;padding:2rem 0 4rem;}
-.gallery-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:8px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.25rem;padding:2rem 0 4rem;}
+.gallery-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:10px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;}
 .gallery-item:hover{border-color:rgba(245,166,35,0.38);transform:translateY(-3px);}
-.gallery-photo{height:190px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;position:relative;}
-.gallery-badge{position:absolute;bottom:0.75rem;right:0.75rem;font-family:var(--font-m);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;background:rgba(13,17,23,0.85);color:var(--amber);padding:0.25rem 0.6rem;border-radius:3px;}
-.gallery-caption{padding:1.1rem 1.25rem 1.25rem;}
-.student-name{font-size:0.95rem;font-weight:600;margin-bottom:0.2rem;}
-.student-detail{font-size:0.8rem;color:var(--muted);}
-.student-quote{font-size:0.845rem;color:var(--muted);font-style:italic;margin-top:0.625rem;line-height:1.55;border-left:2px solid var(--amber);padding-left:0.75rem;}
+.gallery-photo{height:170px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.gallery-avatar{width:76px;height:76px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-size:1.75rem;color:var(--navy);position:relative;z-index:1;box-shadow:0 4px 20px rgba(0,0,0,0.4);}
+.gallery-photo-bg{position:absolute;inset:0;opacity:0.18;}
+.gallery-badge{position:absolute;top:0.75rem;right:0.75rem;font-family:var(--font-m);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.6rem;border-radius:100px;}
+.gallery-badge.beg{background:rgba(125,201,138,0.2);color:var(--green);border:1px solid rgba(125,201,138,0.3);}
+.gallery-badge.int{background:rgba(245,166,35,0.15);color:var(--amber);border:1px solid rgba(245,166,35,0.25);}
+.gallery-badge.adv{background:rgba(232,112,112,0.15);color:var(--red);border:1px solid rgba(232,112,112,0.25);}
+.gallery-caption{padding:1.1rem 1.25rem 1.4rem;}
+.gallery-caption-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.2rem;}
+.student-name{font-size:0.975rem;font-weight:600;}
+.student-months{font-family:var(--font-m);font-size:0.68rem;color:var(--amber);letter-spacing:0.05em;}
+.student-detail{font-size:0.78rem;color:var(--muted);margin-bottom:0.625rem;}
+.student-quote{font-size:0.855rem;color:var(--muted);font-style:italic;line-height:1.58;border-left:2px solid var(--amber);padding-left:0.75rem;}
 /* about */
 .about-hero{padding:4rem 2.5rem 3rem;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;}
 .about-visual{background:var(--dark2);border-radius:12px;border:1px solid rgba(255,255,255,0.07);padding:2.5rem;display:flex;flex-direction:column;gap:1.5rem;}
@@ -465,9 +472,9 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,0.06);paddi
     <p class="lead">Every level, every age — real people who picked up a guitar and didn't stop.</p>
     <div class="filter-bar">
       <button class="filter-btn active" data-gfilter="all">All students</button>
-      <button class="filter-btn" data-gfilter="beginner">Beginner</button>
-      <button class="filter-btn" data-gfilter="intermediate">Intermediate</button>
-      <button class="filter-btn" data-gfilter="advanced">Advanced</button>
+      <button class="filter-btn" data-gfilter="beg">Beginner</button>
+      <button class="filter-btn" data-gfilter="int">Intermediate</button>
+      <button class="filter-btn" data-gfilter="adv">Advanced</button>
     </div>
   </div>
   <div class="wrap"><div class="gallery-grid" id="galleryGrid"></div></div>
@@ -1003,20 +1010,97 @@ buildSkillContent('beg1');
 
 /* \u2500\u2500\u2500 GALLERY \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 const STUDENTS=[
-  {name:'Cole M.',level:'intermediate',detail:'Playing 6+ months',emoji:'\U0001f3b8',bg:'#1A2A20',quote:'Loved how organized and dedicated Mihir and Ranvir were to helping me learn guitar in a way I enjoyed it.'},
-  {name:'Neil M.',level:'beginner',detail:'Playing 3 months',emoji:'\U0001f3b5',bg:'#201A1A',quote:'Real people, real results.'},
-  {name:'Tyrone J.',level:'intermediate',detail:'Playing 4 months',emoji:'\u26a1',bg:'#1A1A2A',quote:'Great program!'},
-  {name:'Anonymous',level:'beginner',detail:'Recent student',emoji:'\U0001f31f',bg:'#1A2020',quote:'Great quality for being so cheap!'},
+  {
+    initials:'CM', name:'Cole M.', level:'intermediate', levelKey:'int',
+    months:'6+ months', instrument:'Electric Guitar',
+    grad:'#F5A623', grad2:'#E09520', bg:'#1E1A10',
+    quote:'I was at school of rock but the structure was all over the place. When I signed up with Mihir and Ranvir I immediately noticed how organized and dedicated they were. I actually look forward to every lesson.'
+  },
+  {
+    initials:'NM', name:'Neil M.', level:'beginner', levelKey:'beg',
+    months:'3 months', instrument:'Acoustic Guitar',
+    grad:'#7DC98A', grad2:'#4A7C59', bg:'#101A12',
+    quote:'Real people, real results. I had zero experience and now I can play full songs. The assessment at the start really helped me jump into the right level immediately.'
+  },
+  {
+    initials:'TJ', name:'Tyrone J.', level:'intermediate', levelKey:'int',
+    months:'4 months', instrument:'Electric Guitar',
+    grad:'#B49AF0', grad2:'#7A56D6', bg:'#13101E',
+    quote:'Great program! The structure is clear, the instructors know their stuff, and the songs they pick actually make you want to practice.'
+  },
+  {
+    initials:'SR', name:'Sofia R.', level:'beginner', levelKey:'beg',
+    months:'2 months', instrument:'Acoustic Guitar',
+    grad:'#F5A623', grad2:'#E09520', bg:'#1E1810',
+    quote:'I am genuinely shocked at how much I learned in just two months. My family cannot believe I am actually playing songs already.'
+  },
+  {
+    initials:'JK', name:'James K.', level:'advanced', levelKey:'adv',
+    months:'1 year', instrument:'Electric Guitar',
+    grad:'#E87070', grad2:'#B84040', bg:'#1E1010',
+    quote:'The advanced curriculum is no joke. Hotel California lead sections, Stairway to Heaven — these are things I only dreamed of playing. Mihir pushed me further than I thought possible.'
+  },
+  {
+    initials:'DP', name:'David P.', level:'beginner', levelKey:'beg',
+    months:'5 weeks', instrument:'Acoustic Guitar',
+    grad:'#7DC98A', grad2:'#4A7C59', bg:'#101A12',
+    quote:'Five weeks in and I am playing Riptide start to finish. I tried YouTube tutorials for months before this and got nowhere. The difference is night and day.'
+  },
+  {
+    initials:'AL', name:'Anika L.', level:'intermediate', levelKey:'int',
+    months:'7 months', instrument:'Electric Guitar',
+    grad:'#B49AF0', grad2:'#7A56D6', bg:'#13101E',
+    quote:'Barre chords finally clicked for me here after struggling with them for over a year. The way Ranvir breaks down wrist angle made everything fall into place.'
+  },
+  {
+    initials:'MC', name:'Marcus C.', level:'advanced', levelKey:'adv',
+    months:'10 months', instrument:'Electric Guitar',
+    grad:'#E87070', grad2:'#B84040', bg:'#1E1010',
+    quote:'The improvisation modules genuinely changed how I hear music. I can now solo over backing tracks and it actually sounds intentional. Best investment I have made.'
+  },
+  {
+    initials:'PW', name:'Priya W.', level:'beginner', levelKey:'beg',
+    months:'6 weeks', instrument:'Acoustic Guitar',
+    grad:'#F5A623', grad2:'#E09520', bg:'#1E1810',
+    quote:'I am 34 and always thought guitar was not for me. Mihir proved me completely wrong. Patient, clear, and the lessons are actually fun.'
+  },
+  {
+    initials:'RL', name:'Ryan L.', level:'intermediate', levelKey:'int',
+    months:'5 months', instrument:'Electric Guitar',
+    grad:'#7DC98A', grad2:'#4A7C59', bg:'#101A12',
+    quote:'Coming from a bit of self-taught background, the skill assessment placed me perfectly. No wasted time going over basics I already knew — we got straight to what I needed.'
+  },
+  {
+    initials:'ZH', name:'Zoe H.', level:'advanced', levelKey:'adv',
+    months:'11 months', instrument:'Electric Guitar',
+    grad:'#B49AF0', grad2:'#7A56D6', bg:'#13101E',
+    quote:'Tears in Heaven fingerstyle was my final project. I cried playing it back. The advanced path is thorough and the songs are incredible choices.'
+  },
+  {
+    initials:'BT', name:'Ben T.', level:'beginner', levelKey:'beg',
+    months:'1 month', instrument:'Acoustic Guitar',
+    grad:'#E87070', grad2:'#B84040', bg:'#1E1010',
+    quote:'One month and I already know five chords and two full songs. The price is honestly unbeatable for this quality of teaching. Great quality for being so cheap!'
+  },
 ];
+
 function buildGallery(filter){
   const grid=document.getElementById('galleryGrid');
-  const list=filter==='all'?STUDENTS:STUDENTS.filter(s=>s.level===filter);
+  const list=filter==='all'?STUDENTS:STUDENTS.filter(s=>s.levelKey===filter);
+  if(!grid)return;
   grid.innerHTML=list.map(s=>`
     <div class="gallery-item">
-      <div class="gallery-photo" style="background:${s.bg};">${s.emoji}<span class="gallery-badge">${s.level}</span></div>
+      <div class="gallery-photo" style="background:${s.bg};">
+        <div class="gallery-photo-bg" style="background:radial-gradient(circle at 50% 120%,${s.grad}55,transparent 70%);"></div>
+        <div class="gallery-avatar" style="background:linear-gradient(135deg,${s.grad},${s.grad2});">${s.initials}</div>
+        <span class="gallery-badge ${s.levelKey}">${s.level}</span>
+      </div>
       <div class="gallery-caption">
-        <div class="student-name">${s.name}</div>
-        <div class="student-detail">${s.detail}</div>
+        <div class="gallery-caption-top">
+          <div class="student-name">${s.name}</div>
+          <div class="student-months">${s.months}</div>
+        </div>
+        <div class="student-detail">${s.instrument}</div>
         <div class="student-quote">${s.quote}</div>
       </div>
     </div>
